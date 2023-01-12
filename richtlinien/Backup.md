@@ -46,12 +46,7 @@ Beim Umgang mit Daten ist für jeden Mitarbeiter folgendes zu beachten:
    - Nach Möglichkeit wird direkt auf Netzlaufwerken/kollaborativen Plattformen/Cloud-Storage gearbeitet.
    - Sofern nicht möglich oder sinnvoll erfolgt eine tägliche Synchronisation selbständig durch den jeweiligen Mitarbeiter.
  - Verfahren mit integrierter Versionierung zu bevorzugen sind.
-
-
-| Maßnahme                                      | ISMS-Integration | Verantwortlich         | Turnus    | Beschreibung                                       |
-| --------------------------------------------- | :--------------: | ---------------------- | --------- | -------------------------------------------------- |
-| Arbeit auf Netzlaufwerk/tägl. Synchronisation |                  | Alle Mitarbeiter:innen | Dauerhaft |                                                    |
-| Sensibilisierung für Mitarbeiter:innen        |        ✔         | IT                     | Jährlich  | Infoblatt oder Schulung für alle Mitarbeiter:innen |
+ - 
 #### Wiederherstellungsverfahren von Sicherungskopien
 
 Bei der Einrichtung von Servern, Datenbanken, Fileshares, Quellcode-Repositories und Entwicklungsumgebungen ist folgendes zu beachten:
@@ -71,15 +66,18 @@ Bei der Einrichtung von Servern, Datenbanken, Fileshares, Quellcode-Repositories
 - Nach Möglichkeit sollte mittels Sensorik bei Nichtdurchführung von Backups eine Alarmierung erfolgen.
   - Besteht diese Möglichkeit nicht, muss die korrekte Erstellung von Backups für das jeweilige Verfahren monatlich manuell geprüft werden.
 
+## Maßnahmen
 
 Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergestellt:
 
-| Maßnahme                                            | ISMS-Integration | Verantwortlich | Turnus          | Beschreibung                                                          |
-| --------------------------------------------------- | :--------------: | -------------- | --------------- | --------------------------------------------------------------------- |
-| Dokumentation bei Einrichtung                       |        ✔         | IT             | Bei Einrichtung | Anleitung zur Sicherung und Wiederherstellung erstellen               |
-| Backuperstellung prüfen (Alarmierung)               |        ✔         | IT             | Halbjährlich    | Sicherstellen, dass für alle relevanten Daten Backups erstellt werden |
-| Backuperstellung prüfen (Alarmierung nicht möglich) |        ✔         | IT             | Monatlich       | Sicherstellen, dass für alle relevanten Daten Backups erstellt werden |
-| Verfahrensaktualität                                |        ✔         | IT             | Jährlich        | Mithilfe von Anleitung alle Verfahren überprüfen                      |
+| Maßnahme                                            | ISMS-Integration | Verantwortlich         | Turnus          | Beschreibung                                                          |
+| --------------------------------------------------- | :--------------: | ---------------------- | --------------- | --------------------------------------------------------------------- |
+| Arbeit auf Netzlaufwerk/tägl. Synchronisation       |                  | Alle Mitarbeiter:innen | Dauerhaft       |                                                                       |
+| Sensibilisierung für Mitarbeiter:innen              |        ✔         | IT                     | Jährlich        | Infoblatt oder Schulung für alle Mitarbeiter:innen                    |
+| Dokumentation bei Einrichtung                       |        ✔         | IT                     | Bei Einrichtung | Anleitung zur Sicherung und Wiederherstellung erstellen               |
+| Backuperstellung prüfen (Alarmierung)               |        ✔         | IT                     | Halbjährlich    | Sicherstellen, dass für alle relevanten Daten Backups erstellt werden |
+| Backuperstellung prüfen (Alarmierung nicht möglich) |        ✔         | IT                     | Monatlich       | Sicherstellen, dass für alle relevanten Daten Backups erstellt werden |
+| Verfahrensaktualität                                |        ✔         | IT                     | Jährlich        | Mithilfe von Anleitung alle Verfahren überprüfen                      |
 
 
 <mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.

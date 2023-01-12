@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Antivirus_und_Malware</title>
+  <title>Informationssicherheit</title>
   <style>
     html {
       line-height: 1.5;
@@ -1108,16 +1108,9 @@
   <![endif]-->
 </head>
 <body>
-<!-- METADATA
-documentname: Antivirus
-currentversion: 0.1.0
- -->
-<!-- import style.css -->
-<!-- <link rel="stylesheet" href="../doc-gen/style.css"> -->
-<h1 id="richtlinie-malware--und-antivirus">Richtlinie: Malware- und
-Antivirus</h1>
+<h1 id="richtlinie-informationssicherheit">Richtlinie:
+Informationssicherheit</h1>
 <h3 id="änderungshistorie">Änderungshistorie</h3>
-<!-- CHANGELOG -->
 <table>
 <thead>
 <tr class="header">
@@ -1132,16 +1125,16 @@ Antivirus</h1>
 <tr class="odd">
 <td>1.0.0</td>
 <td>Entwurf</td>
-<td>9. 1. 2023</td>
+<td>11. 01. 2023</td>
 <td>FB</td>
 <td>Ersterstellung</td>
 </tr>
 </tbody>
 </table>
-<h3 id="zweck">Zweck</h3>
-<p>Mit dieser Richtlinie soll das Risiko von Malware und Viren verwaltet
-und gemindert werden.</p>
-<!-- GELTUNGSBEREICH -->
+<h2 id="kontext">Kontext</h2>
+<p>K7 hat ein Informationssicherheitsmanagementsystem (ISMS) etabliert,
+dessen Anspruch es ist, dem Regelwerk der ISO27001 zu genügen. Diese
+Richtlinie ist zentraler Bestandteil der Informationssicherheit.</p>
 <h2 id="adressaten">Adressaten</h2>
 <table>
 <colgroup>
@@ -1166,30 +1159,30 @@ role="doc-noteref"><sup>2</sup></a></th>
 <tr class="odd">
 <td>Alle Mitarbeiter:innen</td>
 <td style="text-align: center;">✔</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
 <td></td>
 </tr>
 <tr class="even">
 <td>Server, Datenbanken, Fileshares</td>
-<td style="text-align: center;">✔</td>
-<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td>Endgeräte</td>
-<td style="text-align: center;">✔</td>
-<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>bek. externe Nutzer:in<a href="#fn3" class="footnote-ref"
-id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
+<td>Externe Nutzer:in<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Anonyme Nutzer:in<a href="#fn4" class="footnote-ref" id="fnref4"
+<td>Anonym <a href="#fn4" class="footnote-ref" id="fnref4"
 role="doc-noteref"><sup>4</sup></a></td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
@@ -1198,119 +1191,258 @@ role="doc-noteref"><sup>4</sup></a></td>
 </tbody>
 </table>
 <h2 id="grundsatz">Grundsatz</h2>
-<p>Die Unternehmensdaten müssen vor Verlust oder Weitergabe durch
-Malware und Viren geschützt sein. Jede Ressource mit Zugriff auf
-Unternehmensdaten ist davor angemessen zu sichern.</p>
-<h2 id="bereiche">Bereiche</h2>
-<h3 id="bewährte-software">Bewährte Software</h3>
-<h4 id="vorgaben">Vorgaben</h4>
-<p>Auf Unternehmenshardware darf ausschließlich Software installiert
-<em>und verwendet</em> werden:</p>
+<p>K7 erkennt seine Verantwortung im Umgang mit Daten an.
+Informationssicherheit hat für das Unternehmen zentrale Bedeutung.</p>
+<p>Mithilfe der Informationssicherheit möchte K7 die folgenden Ziele
+erreichen:</p>
 <ul>
-<li>Von einem Hersteller auf der Freigabeliste stammt oder</li>
-<li>Einzeln auf der Freigabeliste vermerkt ist oder</li>
-<li>Auf dem Unternehmensportal verfügbar ist oder</li>
-<li>Von der IT vorinstalliert wurde.</li>
-</ul>
-<p>Außerdem gilt:</p>
+<li>Funktionale Aufgabenerledigung
 <ul>
-<li>Sollte eine Software keine Installation benötigen (portable oder
-Webanwendungen wie bspw. Google Docs), aber mit unternehmensrelevanten
-Daten umgehen, ist ebenfalls eine Freigabe erforderlich.</li>
-<li>Mitarbeiter:innen können die Freigabe von Software bei der IT
-beantragen.</li>
-<li>Sofern verfügbar und zielführend sollten Mitarbeiter die
-Web-Versionen der Wunschsoftware verwenden.</li>
-<li>Freigaben gelten - wenn nicht anders vermerkt - für die jeweils
-aktuellste Version.</li>
-<li>Quelloffene Software ist closed source zu bevorzugen.</li>
-<li>Bei bekannt gewordenen Sicherheitslücken veranlasst die IT umgehend
-die Aktualisierung der Software.
-<ul>
-<li>Gelangt ein Mitarbeiter Kenntnis über eine Sicherheitslücke,
-informiert er die IT selbständig.</li>
+<li>Die Informationstechnik muss so betrieben werden, dass
+Geschäftsinformationen hinreichend schnell verfügbar sind. Ausfälle, die
+zu Terminüberschreitungen von mehr als einem Tag bei der Abwicklung von
+Aufträgen oder anderen wichtigen Geschäftsvorhaben führen, sind nicht
+tolerierbar.</li>
+<li>Informationssicherheit unterstützt damit auch eine funktionale
+Aufgabenerledigung.</li>
 </ul></li>
-<li>Sollte eine Freigabe zurückgezogen werden müssen (bspw. wegen nicht
-behebbarer Sicherheitsbedenken), informiert die IT alle Anwender:innen
-und veranlasst gemeinsam die Deinstallation.</li>
-</ul>
-<p>Verstöße sind über die Funktion “Sicherheitsvorfall” des ISMS zu
-melden. Gegenmaßnahmen werden einzelfallbasiert getroffen.</p>
-<h3 id="antivirussoftware">Antivirussoftware</h3>
-<h4 id="vorgaben-1">Vorgaben</h4>
-<p>Für Endanwenderhardware gelten folgende Vorgaben:</p>
+<li>Vermeidung materieller Schaden:
 <ul>
-<li>Auf dem Gerät ist folgende Software zum Schutz vor Viren
-installiert:
-<ul>
-<li>Windows: Defender</li>
-<li>Mac: XProtect</li>
-<li>andere Geräte werden von der Organisation derzeit nicht verwendet,
-werden aber bei Bedarf hinzugefügt</li>
+<li>Unmittelbare oder mittelbare finanzielle Schäden können durch den
+Verlust der Vertraulichkeit schutzbedürftiger Daten, die Veränderung von
+Daten oder den Ausfall einer IT-Anwendung oder eines Systems
+entstehen.</li>
+<li>Informationssicherheit wirkt damit auch materiellen Schäden
+entgegen.</li>
 </ul></li>
-<li>Der Endanwender kann und darf die Antivirensoftware nicht dauerhaft
-deaktivieren.</li>
-<li>Ein Verdacht auf eine Vireninfektion bewirkt:
+<li>Wahrung von Persönlichkeitsrechten und Betriebsgeheimnissen:
 <ul>
-<li>Automatische Reparatur und/oder Quarantäne aller betroffenen
-Dateien</li>
-<li>Behandlung im Rahmen des Vorfallsmanagementprozesses behandelt</li>
+<li>Vertraulichkeit und Integrität der für das Unternehmen wichtigen
+Informationen sind zu schützen, unabhängig davon, in welcher Form sie
+vorliegen. Auch im Umgang mit elektronischen Dokumenten und
+Informationen ist daher Geheimhaltungsanweisungen strikt Folge zu
+leisten.</li>
 </ul></li>
-<li>Die Antivirensoftware bewahrt Auditlogs auf.</li>
-</ul>
-<p>Für den Umgang mit Dateien von Wechseldatenträgern, Links und
-Anhängen gilt:</p>
+<li>Vermeidung von Ansehensverlust bzw. Imageschaden:
 <ul>
-<li><mark>Dateien und Wechseldatenträgern von unbekannten Absendern
-dürfen unter keinen Umständen geöffnet/angeschlossen werden.</mark></li>
-<li>Auch bei bekanntem Absendern wird die Datei nur geöffnet wenn es
-plausibel erscheint, dass <em>diese Datei zu diesem Zeitpunkt im
-verwendeten Format beigestellt wurde.</em></li>
-<li>Bei Verdacht auf bösartige Dateien erfolgt <em>keinerlei Interaktion
-mit dem Absender</em>, sondern lediglich eine Meldung über das ISMS.
-<ul>
-<li>Bei bekannten Absendern kann eine Nachfrage erfolgen, allerdings
-immer über ein anderes Medium als das, mit dem die Datei gesendet wurde.
-Die Alternative muss dabei bereits vorher bekannt sein (keine
-Telefonnummern aus verdächtigen Emails anrufen!).
-<ul>
-<li>Beispiel: Verdächtige Dateien per Email von bekanntem Absender
-erhalten -&gt; Telefonische Rückfrage mit Nummer aus Telefonbuch, nicht
-der Telefonnummer aus der Signatur der Email.</li>
-</ul></li>
-</ul></li>
-<li>Emailanhänge werden zusätzlich serverseitig überprüft.</li>
-<li>Dateien mit diesen Dateiendungen sind als Emailanhänge gesperrt:
-<ul>
-<li>.exe</li>
-<li>.iso</li>
-<li>.bat</li>
-<li>.sh</li>
-<li>.ps1</li>
-<li>Office-Dokumente, die Makros enthalten können (.xlsx, .pptx, .docx
-bleibt erlaubt):
-<ul>
-<li>.xls<strong>m</strong>/.doc<strong>m</strong>/ppt<strong>m</strong>
-(enthält Makros)</li>
-<li>.xls/.doc/.ppt (Office 97)</li>
-</ul></li>
+<li>Finanzielle Schäden und ein negatives Image für das Unternehmen
+müssen verhindert werden.</li>
+<li>Informationssicherheit vermeidet damit Ansehensverlust und
+Imageschaden des Unternehmens.</li>
 </ul></li>
 </ul>
-<h2 id="maßnahmen">Maßnahmen</h2>
+<h2
+id="stellenwert-der-informationstechnoligie-und-informationssicherheit">Stellenwert
+der Informationstechnoligie und Informationssicherheit</h2>
+<p>Informationssicherheit stellt für K7 ein äußerst wichtiges
+Qualitätsmerkmal der Datenverarbeitung dar, da alle wesentlichen
+strategischen und operativen Geschäftsprozesse im Unternehmen durch
+Informationstechnologie (IT) maßgeblich unterstützt werden.</p>
+<p>Ziel des Unternehmens ist es, die Daten und IT-Systeme in allen
+technikabhängigen und kaufmännischen Bereichen in ihrer Verfügbarkeit so
+zu sichern, dass die zu erwartenden Stillstandzeiten und der maximale
+Datenverlust toleriert werden können. Auch gilt es, die Integrität und
+Vertraulichkeit von sensiblen Unternehmensdaten und personenbezogenen
+Daten in ausreichender Weise zu garantieren; hierzu gehören
+Personaldaten ebenso wie technische Unterlagen. Schadensfälle mit hohen
+finanziellen Auswirkungen und immaterielle Folgen in Form von
+Imageschäden für das Unternehmen müssen verhindert werden.</p>
+<p>Beeinträchtigungen hinsichtlich der Verfügbarkeit der
+unternehmenseigenen Applikationen können ebenso gravierende Auswirkungen
+nach sich ziehen wie Unregelmäßigkeiten in Bezug auf die Integrität und
+Vertraulichkeit der verarbeiteten bzw. benutzten Informationen. Die
+Verfügbarkeit, Vertraulichkeit und Integrität der Informationen,
+Anwendungen und IT-Systeme werden nicht nur durch Externe bedroht,
+sondern können auch durch interne Schwachstellen gefährdet werden.</p>
+<p>Ferner werden der Informationssicherheit im Hinblick auf
+Ausschreibungen Vorteile im Markt eingeräumt.</p>
+<h3
+id="informationssicherheitsbeauftragter">Informationssicherheitsbeauftragter</h3>
+<p>Vom Unternehmen wurde ein Informationssicherheitsbeauftragter (ISB)
+bestimmt, der als Verantwortlicher in allen Fragen der
+Informationssicherheit sowohl für die Geschäftsführung und die
+Mitarbeiter von K7 als auch für Dritte fungiert.</p>
+<p>Derzeitiger ISB:</p>
+<p>Michael Mustermann</p>
+<p>Der ISB ist in Angelegenheiten der Informationssicherheit
+weisungsbefugt.</p>
+<p>Er hat dabei u.A. folgende Aufgaben:</p>
+<ul>
+<li>Der Informationssicherheitsbeauftragte ist für die Koordination des
+Betriebs des ISMS verantwortlich sowie für die Berichterstattung über
+dessen Leistungsfähigkeit.</li>
+<li>Er ist des Weiteren für die Koordination bzw. Umsetzung von
+Informationssicherheitstrainings und -programmen zur Bewusstseinsbildung
+(Awareness) für Mitarbeitende verantwortlich.</li>
+<li>Der Informationssicherheitsbeauftragte definiert, welche sich auf
+Informationssicherheit beziehenden Informationen durch wen und wann
+kommuniziert werden. Dies gilt sowohl für interne als auch externe
+Parteien.</li>
+<li>Er ist für die Aufstellung und Implementierung des Plans für
+Training und Awareness verantwortlich, dem alle Personen unterliegen,
+die eine Rolle im ISMS innehaben.</li>
+<li>Die Einführung neuer Anwendungen, Verfahren, Prozesse und
+Infrastrukturkomponenten bedarf einer Freigabe durch den
+Informationssicherheitsbeauftragten. Dabei muss besonderes Augenmerk
+darauf gerichtet werden, dass durch den Einsatz der neuen Komponenten
+und Verfahren die Risiken hinsichtlich Informationssicherheit
+(Vertraulichkeit, Integrität, Verfügbarkeit) nicht erhöht werden.</li>
+<li>Der Informationssicherheitsbeauftragte berät die Geschäftsführung
+und die Fachbereiche in Fragen der Informationssicherheit und arbeitet
+mit der IT-Leitung zusammen. Er beobachtet laufend die technischen und
+organisatorischen Fortentwicklungen im Bereich der
+Informationssicherheit und schlägt in Abstimmung mit der IT-Leitung die
+notwendigen Maßnahmen vor. Des Weiteren ist er frühzeitig in alle
+Projekte einzubinden, um schon in der Planungsphase alle
+sicherheitsrelevanten Aspekte berücksichtigen zu können.</li>
+</ul>
+<h3 id="unternehmensziele">Unternehmensziele</h3>
+<p>Die Geschäftsführung hat entschieden, dass ein angemessenes
+Sicherheitsniveau für einen <em>normalen</em> Schutzbedarf angestrebt
+werden soll. Grundlage für diese Entscheidung war eine
+Gefährdungsabschätzung über die Werte der zu schützenden Güter sowie des
+vertretbaren Aufwands an Personal und Finanzmitteln für
+Informationssicherheit. Dies bedeutet im Einzelnen:</p>
+<h5 id="bewusstsein-für-informationssicherheit">Bewusstsein für
+Informationssicherheit</h5>
+<p>Um Informationssicherheit gewährleisten zu können, sind angemessene
+technische und organisatorische Maßnahmen erforderlich. Diese können nur
+dann hinreichend wirksam sein, wenn alle Beschäftigten die möglichen
+Gefährdungen für die Informationssicherheit kennen und in ihren
+Aufgabenbereichen entsprechend verantwortlich handeln. Regelmäßige
+Fortbildungen zur Informationssicherheit können hierbei
+unterstützen.</p>
+<h5 id="einhaltung-von-gesetzen-oder-vorschriften">Einhaltung von
+Gesetzen oder Vorschriften</h5>
+<p>Die Maßnahmen für Informationssicherheit sollen auch dazu beitragen,
+dass die für das Unternehmen relevanten Gesetze, Vorschriften und
+vertragliche Verpflichtungen eingehalten werden.</p>
+<p>Als wichtigste zu beachtende Rahmenbedingungen gelten dabei:</p>
+<ul>
+<li>§ 238-239, 257-261 Handelsgesetzbuch (HGB)</li>
+<li>91 Abs. 2 Aktiengesetz (AktG) ODER GmbHG §43 Abs 1 GmbH-Gesetz
+(GmbHG)</li>
+<li>Datenschutz-Grundverordnung (DSGVO)</li>
+<li>Bundesdatenschutzgesetz (BDSG)</li>
+<li>Grundsätze zur ordnungsmäßigen Führung und Aufbewahrung von Büchern,
+Aufzeichnungen und Unterlagen in elektronischer Form sowie zum
+Datenzugriff (GoBD)</li>
+<li>Betriebsverfassungsgesetz (BVerfG)</li>
+<li>ergänzende Kundenanforderungen</li>
+</ul>
+<p>Informationssicherheit unterstützt damit auch die Einhaltung von
+Gesetzen und Vorschriften.</p>
+<h4
+id="organisation-des-managementsystems-für-informationssicherheit">Organisation
+des Managementsystems für Informationssicherheit</h4>
+<p>Grundsätzlich sind ergänzend zum ISB folgende Verantwortlichkeiten
+innerhalb des ISMS definiert:</p>
+<h5 id="geschäftsführung-gf">Geschäftsführung (GF)</h5>
+<ul>
+<li>Die Geschäftsführung ist das oberste Entscheidungsgremium. Sie
+verabschiedet auf Vorschlag der Informationssicherheitsbeauftragten
+diese Informationssicherheitsleitlinie.</li>
+<li>Die Geschäftsführung ist dafür verantwortlich, sicherzustellen, dass
+das ISMS entsprechend dieser Richtlinie umgesetzt und aktualisiert wird
+und dass die notwendigen Ressourcen verfügbar sind.</li>
+<li>Der IT-Leitung und dem Informationssicherheitsbeauftragten werden
+von der Geschäftsführung ausreichende finanzielle und zeitliche
+Ressourcen zur Verfügung gestellt, um sich regelmäßig weiterzubilden, zu
+informieren und die vom Management festgelegten Sicherheitsziele zu
+erreichen.</li>
+<li>Die Geschäftsleitung muss das ISMS mindestens einmal jährlich
+überprüfen (bzw. immer im Falle von erheblichen Änderungen) und
+freigeben. Zweck dieser Überprüfung durch das Management ist der
+Nachweis der Angemessenheit, Eignung und Wirksamkeit des ISMS.</li>
+<li>Die Gesamtverantwortung für die ordnungsgemäße und sichere
+Aufgabenerfüllung (und damit die Informationssicherheit) verbleibt bei
+der Unternehmensleitung.</li>
+</ul>
+<h5 id="it-leitung">IT-Leitung</h5>
+<ul>
+<li>Die zentrale Instanz für die operative IT-Sicherheit ist die
+IT-Leitung. Sie ist für den sicheren Betrieb der IT und die Umsetzung
+geeigneter Sicherheitsmechanismen verantwortlich.</li>
+<li>In Zusammenarbeit mit dem Informationssicherheitsbeauftragten bringt
+sie die für die Informationssicherheit spezifischen Aspekte und Anliegen
+ein und ist für die Umsetzung geeigneter Sicherheitsmaßnahmen
+zuständig.</li>
+<li>Die IT-Leitung stellt sicher, dass der
+Informationssicherheitsbeauftragte frühzeitig in alle IT-Projekte
+eingebunden wird.</li>
+</ul>
+<h5 id="is-management-team-isms-team">IS-Management-Team
+(ISMS-Team)</h5>
+<ul>
+<li>Das IS-Management-Team setzt sich aus dem
+Informationssicherheitsbeauftragten und fachkundigen Mitarbeitern für
+die Administration und für den Betrieb zusammen. Das IS-Management-Team
+hält regelmäßige Treffen ab.</li>
+<li>Das IS-Management-Team plant die notwendigen Tätigkeiten zur
+Aufrechterhaltung und Verbesserung der Informationssicherheit. Weiterhin
+werden im IS-Management-Team Audits geplant und Sicherheitsvorfälle
+besprochen.</li>
+<li>Im IS-Management-Team werden auch die Dokumente des ISMS laufend
+überprüft und überarbeitet. Planungen und Änderungen im
+Anwendungsbereich sind stets im IS-Management-Team abzustimmen.</li>
+</ul>
+<h5 id="mitarbeiter">Mitarbeiter</h5>
+<ul>
+<li>Die Mitarbeiter sollen sich stets der Bedeutung der
+Informationssicherheit bewusst sein und aktiv an der Abwehr und
+Bekämpfung von materiellen und ideellen Schäden mitwirken. Sie sollen
+verantwortungsbewusst mit den Informationssystemen und den darauf
+gespeicherten und dort verarbeiteten Daten umgehen und auf die Wahrung
+von Betriebs- und Geschäftsgeheimnissen achten.</li>
+<li>Der Schutz der Integrität, Verfügbarkeit und Vertraulichkeit von
+Werten unterliegt der Verantwortung der Eigentümer der jeweiligen
+Werte.</li>
+<li>Bei Unregelmäßigkeiten müssen die Mitarbeiter unverzüglich den
+Informationssicherheitsbeauftragten und ihre Vorgesetzten informieren.
+Es wird erwartet, dass jeder Nutzer von IT-Systemen die vorliegende
+Informationssicherheitsleitlinie kennt und beachtet.</li>
+</ul>
+<h5 id="weitere-verantwortlichkeiten">Weitere Verantwortlichkeiten</h5>
+<ul>
+<li>Für alle Informationen, Geschäftsprozesse sowie die unterstützenden
+informationstechnischen Systeme und Infrastruktureinrichtungen werden
+Verantwortliche (Informations-, Prozess- und Systemeigentümer,
+Eigentümer von Zielobjekten) benannt.</li>
+<li>Diese sind dafür zuständig, die geschäftliche Bedeutung von
+Informationen und Technik einzuschätzen und darauf zu achten, dass die
+Mitarbeiter dieser Bedeutung entsprechend handeln. Sie verwalten
+Zugriffsrechte und Autorisierungen in ihrem Zuständigkeitsbereich und
+sind gegenüber der Leitung rechenschaftspflichtig.</li>
+<li>Sie sind auch dafür verantwortlich, externen Dienstleistern und
+Kooperationspartnern die Vorgaben zur Informationssicherheit zur
+Kenntnis zu geben und deren Einhaltung zu überwachen.</li>
+</ul>
+<h3 id="folgen-von-zuwiderhandlungen">Folgen von Zuwiderhandlungen</h3>
+<p>Beabsichtigte oder grob fahrlässige Handlungen, die
+Sicherheitsvorgaben verletzen, können finanzielle Verluste bedeuten,
+Mitarbeiter, Geschäftspartner und Kunden schädigen oder den Ruf des
+Unternehmens gefährden. Bewusste Verstöße gegen verpflichtende
+Sicherheitsregeln können arbeitsrechtliche und unter Umständen auch
+strafrechtliche Konsequenzen haben und zu Regressforderungen führen.</p>
+<h3 id="weitere-maßnahmen">Weitere Maßnahmen</h3>
+<p>Ausgehend von der IT-Grundschutz-Methodik zur Einführung und
+Aufrechterhaltung eines Managementsystems für Informationssicherheit
+wurden diverse weiterführende Regelungen geschaffen, die dieses ISMS
+konkretisieren und gleichfalls gültig sind.</p>
 <p>Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen
 sichergestellt:</p>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 6%" />
-<col style="width: 6%" />
+<col style="width: 20%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
 <col style="width: 5%" />
-<col style="width: 68%" />
+<col style="width: 55%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Maßnahme</th>
-<th>ISMS-Integration</th>
+<th style="text-align: center;">ISMS-Integration</th>
 <th>Verantwortlich</th>
 <th>Turnus</th>
 <th>Beschreibung</th>
@@ -1318,71 +1450,48 @@ sichergestellt:</p>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Beschränkung Installation</td>
-<td></td>
-<td>IT</td>
-<td>Dauerhaft</td>
-<td>Mitarbeiter sollen i.d.R. keine Berechtigung besitzen nicht
-freigegebene Software nutzerübergreifen zu installieren</td>
+<td>Ernennung ISB</td>
+<td style="text-align: center;">✔</td>
+<td>GF</td>
+<td>Initial</td>
+<td>Ernennung eines Informationssicherheitsbeauftragen (intern oder
+extern)</td>
 </tr>
 <tr class="even">
-<td>Reporting</td>
-<td>✔</td>
-<td>IT</td>
-<td>Quartal</td>
-<td>Reporting über auf Ressourcen installierte Software</td>
-</tr>
-<tr class="odd">
-<td>Aktualisierung Freigabe</td>
-<td></td>
-<td>IT</td>
-<td>Halbjährlich</td>
-<td>Freigabeliste ist aktuell zu halten</td>
-</tr>
-<tr class="even">
-<td>Installation Antivirensoftware</td>
-<td>✔</td>
-<td>IT</td>
-<td>Dauerhaft</td>
-<td>Installation auf Endanwenderhardware</td>
-</tr>
-<tr class="odd">
-<td>Reporting</td>
-<td>✔</td>
-<td>IT</td>
-<td>Quartal</td>
-<td>Reporting über auf Ressourcen installierte Software</td>
-</tr>
-<tr class="even">
-<td>Verdacht auf Infektion</td>
-<td></td>
-<td>Mitarbeiter, IT</td>
-<td>Anlassbezogen</td>
-<td>Meldung als Sicherheitsvorfall</td>
-</tr>
-<tr class="odd">
-<td>Serverprüfung Emailanhänge/Links</td>
-<td>✔</td>
-<td>IT</td>
-<td>Dauerhaft</td>
-<td>Exchange-Server prüft automatisch</td>
-</tr>
-<tr class="even">
-<td>Schulung/Sensibilisierung</td>
-<td>✔</td>
-<td>IT</td>
+<td>Awareness-Schulung</td>
+<td style="text-align: center;">✔</td>
+<td>ISB</td>
 <td>Jährlich</td>
-<td>Schulung über Phishing, die sichere Nutzung des Internets, die
-Verwendung von Software und das Verhalten im Falle einer Virus- oder
-Malware-Infektion unterrichtet.</td>
+<td>Awareness-Schulung durch ISB an alle Mitarbeiter</td>
 </tr>
 <tr class="odd">
-<td>Email: Unsichere Anhänge</td>
-<td>✔</td>
-<td>IT</td>
+<td>Einbindung Prozesse ISB</td>
+<td style="text-align: center;"></td>
+<td>ISB, GF</td>
 <td>Dauerhaft</td>
-<td>Emails mit unsicheren Anhängen werden vom Email-Server automatisch
-gesperrt</td>
+<td>Prozesse müssen von ISB freigegeben werden</td>
+</tr>
+<tr class="even">
+<td>Einführung ISMS</td>
+<td style="text-align: center;"></td>
+<td>IT, GF</td>
+<td>Initial</td>
+<td>Auswahl eines geeignetes ISMS, geeignete Infrastruktur schaffen,
+Personal bereitstellen</td>
+</tr>
+<tr class="odd">
+<td>Überprüfung ISMS</td>
+<td style="text-align: center;">✔</td>
+<td>IT, GF</td>
+<td>Jährlich</td>
+<td>Nachweis der Angemessenheit, Eignung und Wirksamkeit des ISMS</td>
+</tr>
+<tr class="even">
+<td>Jour fixe Informationssicherheit</td>
+<td style="text-align: center;">✔</td>
+<td>ISMS-Team, GF</td>
+<td>Monatlich</td>
+<td>Meeting, Agenda: Sicherheitsvorfälle, aktuelle Entwicklung, KVP</td>
 </tr>
 </tbody>
 </table>
@@ -1394,8 +1503,10 @@ role="doc-endnotes">
 <ol>
 <li id="fn1"><p>Die Adressaten sind nicht direkt von der Richtlinie
 betroffen, daher müssen Sie nicht über Änderungen informiert werden und
-den Erhalt nicht schriftlich bestätigen.<a href="#fnref1"
-class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+den Erhalt nicht schriftlich bestätigen. Da sie aber in Zukunft Aufgaben
+übernehmen könnten, bei der diese Richtlinie beachtet werden muss,
+sollten sie zumindest wissen, dass es die Richtlinie gibt.<a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Personen: Die Richtlinie ist vom Adressatenkreis
 schriftlich oder elektronisch zu bestätigen. Bei Änderungen muss eine
 Information an den Adressatenkreis erfolgen. Hardware: Überprüfung der

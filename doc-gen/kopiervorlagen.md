@@ -35,7 +35,7 @@ Mit dieser Richtlinie soll ...
 #### Vorgaben
 
 
-#### Maßnahmen
+## Maßnahmen
 
 Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergestellt:
 
@@ -43,7 +43,7 @@ Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergeste
 | ------------------- | :--------------: | ----------------- | --------------------------------------- | --------------------------- |
 | [Name der Maßnahme] |        ✔         | [Adressatenkreis] | [Quartal, Halbjährlich, Monatlich etc.] | [Beschreibung der Maßnahme] |
 
-Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden. Gegenmaßnahmen werden einzelfallbasiert getroffen.
+<mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.
 
 
 <!-- GLOSSAR -->

@@ -78,4 +78,6 @@ Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergeste
 | Report    |        ✔         | Geschäftsführung, IT | Jährlich   | Prüfung, ob alle Drittanbieter erfasst sind sowie ggf. Neueinstufung bei Änderungen |
 | Audit     |        ✔         | Geschäftsführung, IT | bei Bedarf | Audit bei Drittanbietern                                                            |
 
+<mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.
+
 <mark>Jede Ausnahme von der Richtlinie muss vom Informationssicherheitsbeauftragten im Voraus genehmigt und aufgezeichnet und dem Management Review Team gemeldet werden.</mark>
