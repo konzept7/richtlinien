@@ -25,9 +25,7 @@ K7 hat ein Informationssicherheitsmanagementsystem (ISMS) etabliert, dessen Ansp
 
 ## Grundsatz
 
-K7 erkennt seine Verantwortung im Umgang mit Daten an. Informationssicherheit hat für das Unternehmen zentrale Bedeutung. 
-
-Mithilfe der Informationssicherheit möchte K7 die folgenden Ziele erreichen:
+Informationssicherheit ist von entscheidender Bedeutung für den Erfolg und die Integrität unseres Unternehmens. Durch die ständige Evolution von Technologien und Bedrohungen durch Cyberkriminalität ist es unerlässlich, dass wir alle in unserem Unternehmen eine aktive Rolle in der Verteidigung gegen potenzielle Angriffe spielen. Diese Richtlinie dient dazu, unsere Verpflichtung zur Informationssicherheit zu definieren und die Schritte zu beschreiben, die alle Mitarbeiter:innen ergreifen sollten, um sicherzustellen, dass unser Unternehmen, unsere Kunden und unsere Daten geschützt sind.
 
 - Funktionale Aufgabenerledigung
   - Die Informationstechnik muss so betrieben werden, dass Geschäftsinformationen hinreichend schnell verfügbar sind. Ausfälle, die zu Terminüberschreitungen von mehr als einem Tag bei der Abwicklung von Aufträgen oder anderen wichtigen Geschäftsvorhaben führen, sind nicht tolerierbar.
@@ -53,9 +51,9 @@ Ferner werden der Informationssicherheit im Hinblick auf Ausschreibungen Vorteil
 
 ### Informationssicherheitsbeauftragter
 
-Vom Unternehmen wurde ein Informationssicherheitsbeauftragter (ISB) bestimmt, der als Verantwortlicher in allen Fragen der Informationssicherheit sowohl für die Geschäftsführung und die Mitarbeiter von K7 als auch für Dritte fungiert.
+Der Informationssicherheitsbeauftragte hat eine Schlüsselfunktion in der Umsetzung und Aufrechterhaltung unserer Informationssicherheitsrichtlinie. Diese Person ist verantwortlich dafür, die Sicherheitsstrategie des Unternehmens zu entwickeln und umzusetzen, potenzielle Risiken zu identifizieren und zu bewerten, sowie Maßnahmen zu ergreifen, um diese Risiken zu minimieren. Sie ist der Ansprechpartner für alle Fragen und Anliegen bezüglich Informationssicherheit und sorgt dafür, dass alle Mitarbeiter:innen und Abteilungen die aktuellen Sicherheitsrichtlinien und Verfahren befolgen. Der Informationssicherheitsbeauftragte arbeitet eng mit dem Management und anderen Abteilungen des Unternehmens zusammen, um sicherzustellen, dass die Informationssicherheit in allen Aspekten des Unternehmens integriert ist.
 
-Derzeitiger ISB:
+Die Geschäftsführung hat zum Sicherheitsbeauftragten bestimmt:
 
 Michael Mustermann
 

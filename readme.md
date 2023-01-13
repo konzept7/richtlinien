@@ -1,3 +1,4 @@
+**Diese Seite wird über GitHub Pages unter [konzept7.github.io/richtlinien](konzept7.github.io/richtlinien) bereitgestellt.**
 
 # Richtlinienübersicht
 
@@ -13,7 +14,6 @@ Diese Änderungshistorie bezieht sich ausschließlich auf die readme-Datei. Alle
 | Version | Datum     | Autor | Bemerkung         |
 | ------- | --------- | ----- | ----------------- |
 | 1.0.0   | 12.1.2023 | FB    | Initialerstellung |
-| 2.0.0   | 12.1.2023 | FB    | Initialerstellung |
 
 Änderungen in dieser Datei sind ebenfalls der git-Historie zu entnehmen.
 
@@ -23,7 +23,7 @@ Es ist Aufgabe der ändernden Person, Projektbeteiligte über etwaige Änderunge
 
 Einstufung: **Normal**
 
-- [x] Dieses Projekt ist ausschließlich für Mitarbeiter der IBS GnbH bestimmt
+- [x] Dieses Projekt ist ausschließlich für Mitarbeiter von K7 bestimmt
 - [ ] Dieses Projekt verarbeitet *und* speichert Kundendaten
 - [ ] Dieses Projekt verarbeitet *und* speichert Zahlungsdsaten
 - [ ] Es gibt über das Internet erreichbare Schnittstellen

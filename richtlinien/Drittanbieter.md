@@ -1,9 +1,11 @@
+# Richtlinie: Drittanbieter
+
 ### Änderungshistorie
 | Version | Status  | Datum        | Autor | Bemerkung      |
 | ------- | ------- | ------------ | ----- | -------------- |
 | 1.0.0   | Entwurf | 10. 01. 2023 | FB    | Ersterstellung |
 
-### Zweck
+## Zweck
 
 Ziel dieser Richtlinie ist es, die Anforderungen an die Datensicherheit von Drittanbietern und deren Unterauftragnehmern sowie der Lieferkette zu gewährleisten.
 

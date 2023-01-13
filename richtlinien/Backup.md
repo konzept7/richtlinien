@@ -1,6 +1,5 @@
 # Richtlinie: Backups
 
-<!-- CHANGELOG -->
 ### Änderungshistorie
 | Version | Status  | Datum      | Autor | Bemerkung      |
 | ------- | ------- | ---------- | ----- | -------------- |

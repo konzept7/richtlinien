@@ -6,6 +6,7 @@
 | 1.0.0   | Entwurf | 9. 1. 2023 | FB    | Ersterstellung |
 
 ## Zweck
+
 Diese Richtlinie soll bei Veränderungen im Unternehmen sowohl die Risiken minimieren, als auch die Veränderungen und deren Werdegang protokollieren.
 
 ## Adressaten
@@ -27,22 +28,30 @@ Diese Richtlinie soll bei Veränderungen im Unternehmen sowohl die Risiken minim
 
 Änderungen sollen für alle Mitarbeiter und sonstige Beteiligte nachvollziehbar und nachverfolgbar sein.
 
+## Vorgaben
+
 ### Nachverfolgbarkeit
+
 Alle Änderungsanträge werden abgelegt.
 
 ### Priorisierung
+
 Die Änderungsanträge werden nach Dringlichkeit, Aufwand und Nutzen sowie den möglichen Auswirkungen auf den Geschäftsbetrieb priorisiert.
 
 ### Risikobewertung
+
 Jeder Änderungsantrag wird nach der Risikomanagementrichtlinie bewertet.
 
 ### Kommunikation
+
 Alle Betroffenen Benutzer werden ausreichend über die Änderung informiert.
 
 ### Einfrieren von Änderungen
+
 Sollte es notwändig sein, kann durch die Geschäftsführung ein Änderungsstopp verabschiedet werden, der auf bestimmte Zeit Änderungen kleiner Prioritäten verhindert. In dieser Zeit werden Änderungen nur mit hoher Priorität freigegeben und umgesetzt.
 
 ### Notfalländerungen
+
 Der reguläre Änderungsprozess kann in dringenden Fällen umgangen werden, um eine Änderung möglichst zügig umzusetzen. Trotzdem sollten Auswirkungen bedacht werden; vor allem muss die Genehmigung und Dokumentation eingehalten werden.
 Die Änderung ist mindest von der Geschäftsleitung freizugeben.
 

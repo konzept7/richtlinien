@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Backup</title>
+  <title>Informationsuebertragung</title>
   <style>
     html {
       line-height: 1.5;
@@ -1108,7 +1108,8 @@
   <![endif]-->
 </head>
 <body>
-<h1 id="richtlinie-backups">Richtlinie: Backups</h1>
+<h1 id="richtlinie-sichere-informationsübertragung">Richtlinie: Sichere
+Informationsübertragung</h1>
 <h3 id="änderungshistorie">Änderungshistorie</h3>
 <table>
 <thead>
@@ -1124,15 +1125,34 @@
 <tr class="odd">
 <td>1.0.0</td>
 <td>Entwurf</td>
-<td>9. 1. 2023</td>
+<td>12. 01. 2023</td>
 <td>FB</td>
 <td>Ersterstellung</td>
 </tr>
 </tbody>
 </table>
 <h2 id="zweck">Zweck</h2>
-<p>Mit dieser Richtlinie soll vor Datenverlust geschützt werden.</p>
+<p>Zweck dieser Richtlinie ist es, die korrekte Behandlung bei der
+Übermittlung von Informationen innerhalb und außerhalb des Unternehmens
+sicherzustellen und die Übermittlung von Informationen über alle Arten
+von Kommunikationseinrichtungen zu schützen.</p>
+<p>Die Richtlinie zur sicheren Informationsübertragung hat das Ziel,
+sicherzustellen, dass vertrauliche und sensible Daten, die von einem
+Unternehmen übertragen werden, geschützt sind und nicht in die falschen
+Hände geraten. Diese Richtlinie beschreibt die Verfahren, die bei der
+Übertragung von Daten einzuhalten sind, um sicherzustellen, dass die
+Integrität, Vertraulichkeit und Verfügbarkeit der Daten gewährleistet
+ist.</p>
+<p>Das kann Verfahren umfassen wie die Verwendung von Verschlüsselung
+bei der Übertragung von Daten über das Internet oder das Einhalten von
+Compliance-Anforderungen bei der Verarbeitung von personenbezogenen
+Daten, sowie Prozesse und Verantwortlichkeiten für die Überwachung und
+Überprüfung der Übertragung von Daten. Es kann auch Empfehlungen und
+Anforderungen für die Wahl von externen Dienstleistern enthalten, die
+Informationsübertragungsdienste bereitstellen, sowie die Prozesse für
+die Behandlung von Sicherheitsverletzungen.</p>
 <h2 id="adressaten">Adressaten</h2>
+<h2 id="adressaten-1">Adressaten</h2>
 <table>
 <colgroup>
 <col style="width: 37%" />
@@ -1167,167 +1187,190 @@ role="doc-noteref"><sup>2</sup></a></th>
 </tr>
 <tr class="odd">
 <td>Endgeräte</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
 <td></td>
 </tr>
 <tr class="even">
-<td>bek. externe Nutzer:in<a href="#fn3" class="footnote-ref"
-id="fnref3" role="doc-noteref"><sup>3</sup></a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td>Externe Nutzer:in<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Anonyme Nutzer:in<a href="#fn4" class="footnote-ref" id="fnref4"
+<td>Anonym <a href="#fn4" class="footnote-ref" id="fnref4"
 role="doc-noteref"><sup>4</sup></a></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
 <td style="text-align: center;"></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p>Insbesondere zu schützen sind:</p>
+<h2 id="vorgaben">Vorgaben</h2>
+<p>Für die Informationsübertragung gilt generell:</p>
 <ul>
-<li>Server</li>
-<li>Datenbanken</li>
-<li>Fileshares</li>
-<li>Quellcode-Repositories</li>
-<li>Entwicklungsumgebungen</li>
-</ul>
-<h2 id="grundsatz">Grundsatz</h2>
-<p>Daten werden gemäßg den Anforderungen an die Datenaufbewahrung den
-geschäftlichen Anforderungen und allen gesetzlichen sowie
-regulatorischen Anforderungen, einschließlich, aber nicht beschränkt auf
-die DSGVO, sicher gesichert.</p>
-<h2 id="bereiche">Bereiche</h2>
-<h4 id="unternehmensdaten">Unternehmensdaten</h4>
-<p>Beim Umgang mit Daten ist für jeden Mitarbeiter folgendes zu
-beachten:</p>
-<ul>
-<li>Alle unternehmensrelevanten Daten sollten nicht ausschließlich auf
-persönlichen Endgeräten gespeichert werden.
-<ul>
-<li>Nach Möglichkeit wird direkt auf Netzlaufwerken/kollaborativen
-Plattformen/Cloud-Storage gearbeitet.</li>
-<li>Sofern nicht möglich oder sinnvoll erfolgt eine tägliche
-Synchronisation selbständig durch den jeweiligen Mitarbeiter.</li>
-</ul></li>
-<li>Verfahren mit integrierter Versionierung zu bevorzugen sind.</li>
-<li><h4
-id="wiederherstellungsverfahren-von-sicherungskopien">Wiederherstellungsverfahren
-von Sicherungskopien</h4></li>
-</ul>
-<p>Bei der Einrichtung von Servern, Datenbanken, Fileshares,
-Quellcode-Repositories und Entwicklungsumgebungen ist folgendes zu
-beachten:</p>
-<ul>
-<li>Die Verfahren zur Sicherung und Wiederherstellen werden bei der
-Ersteinrichtung dokumentiert und eingerichtet.
-<ul>
-<li>Standardplan:
-<ul>
-<li>Tägliche oder Point-in-time Backups werden für 7 Tage
-aufbewahrt</li>
-<li>Wöchentliche Backups werden für 28 Tage aufbewahrt.</li>
-<li>Monatliche Backups werden für 12 Monate aufbewahrt.</li>
-</ul></li>
-<li>Abweichungen davon sind zulässig, müssen aber begründet und
-dokumentiert sein.</li>
-</ul></li>
-<li>Bereits vorhandene Verfahren müssen bei Einrichtung einer neuen,
-vergleichbaren Ressource nicht erneut beschrieben werden, deren
-Anwendung muss allerdings dokumentiert sein.</li>
-<li>Die Verfahren zur Wiederherstellung müssen getestet werden.</li>
-<li>Aktuell sind Sicherungen auf physischen Medien nicht vorgesehen.
-Sollte das notwendig werden, erfolgt eine Anpassung der Richtlinie.</li>
-<li>Sicherungen von Systemen werden mindestens einmal pro Jahr getestet,
-um sicherzustellen, dass sie verlässlich sind den Anforderungen
-entsprechend.</li>
-<li>Backups dürfen nur dem relevanten Personenkreis zur Verfügung
-gestellt werden. Es gelten mindestens die gleichen
-Sicherheitsanforderungen wie für die Originaldaten.</li>
-<li>Backups werden verschlüsselt mit der vom Hersteller des
-Backupsystems eingebauten Verschlüsselung. Backup werden nur in
-Cloud-Lösungen gespeichert, die mindestens die Anforderungen der
-ISO27001 erfüllen.</li>
-<li>Nach Möglichkeit sollte mittels Sensorik bei Nichtdurchführung von
-Backups eine Alarmierung erfolgen.
-<ul>
-<li>Besteht diese Möglichkeit nicht, muss die korrekte Erstellung von
-Backups für das jeweilige Verfahren monatlich manuell geprüft
-werden.</li>
-</ul></li>
+<li>Die Datenübermittlung muss mit allen gesetzlichen und
+regulatorischen Anforderungen übereinstimmen, einschließlich, aber nicht
+beschränkt auf die DSGVO.</li>
+<li>Für die gemeinsame Nutzung von Daten müssen vor der
+Datenübermittlung formelle Vereinbarungen getroffen werden, die
+Vertraulichkeits- und Geheimhaltungsklauseln enthalten.</li>
+<li>Personenbezogene Daten dürfen nicht außerhalb des Europäischen
+Wirtschaftsraums übermittelt werden, ohne dass eine gesetzeskonforme
+Zustimmung, eine Rechtfertigung und entsprechende rechtliche Mechanismen
+vorliegen.</li>
+<li>Keine persönlichen oder vertraulichen Informationen dürfen
+unverschlüsselt übertragen werden.</li>
+<li>Alle Übermittlungen stehen im Einklang mit der Richtlinie zur
+Klassifizierung und Handhabung von Informationen.</li>
+<li>Nachdem die Daten den Empfänger erreicht haben, müssen
+Wechseldatenträger sicher gelöscht werden, bevor er entsorgt oder
+weitergegeben wird, um sicherzustellen, dass keine sensiblen Daten von
+Dritten abgerufen werden können.</li>
 </ul>
 <h2 id="maßnahmen">Maßnahmen</h2>
-<p>Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen
-sichergestellt:</p>
-<table>
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 9%" />
-<col style="width: 12%" />
-<col style="width: 8%" />
-<col style="width: 39%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Maßnahme</th>
-<th style="text-align: center;">ISMS-Integration</th>
-<th>Verantwortlich</th>
-<th>Turnus</th>
-<th>Beschreibung</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Arbeit auf Netzlaufwerk/tägl. Synchronisation</td>
-<td style="text-align: center;"></td>
-<td>Alle Mitarbeiter:innen</td>
-<td>Dauerhaft</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Sensibilisierung für Mitarbeiter:innen</td>
-<td style="text-align: center;">✔</td>
-<td>IT</td>
-<td>Jährlich</td>
-<td>Infoblatt oder Schulung für alle Mitarbeiter:innen</td>
-</tr>
-<tr class="odd">
-<td>Dokumentation bei Einrichtung</td>
-<td style="text-align: center;">✔</td>
-<td>IT</td>
-<td>Bei Einrichtung</td>
-<td>Anleitung zur Sicherung und Wiederherstellung erstellen</td>
-</tr>
-<tr class="even">
-<td>Backuperstellung prüfen (Alarmierung)</td>
-<td style="text-align: center;">✔</td>
-<td>IT</td>
-<td>Halbjährlich</td>
-<td>Sicherstellen, dass für alle relevanten Daten Backups erstellt
-werden</td>
-</tr>
-<tr class="odd">
-<td>Backuperstellung prüfen (Alarmierung nicht möglich)</td>
-<td style="text-align: center;">✔</td>
-<td>IT</td>
-<td>Monatlich</td>
-<td>Sicherstellen, dass für alle relevanten Daten Backups erstellt
-werden</td>
-</tr>
-<tr class="even">
-<td>Verfahrensaktualität</td>
-<td style="text-align: center;">✔</td>
-<td>IT</td>
-<td>Jährlich</td>
-<td>Mithilfe von Anleitung alle Verfahren überprüfen</td>
-</tr>
-</tbody>
-</table>
-<p><mark>Verstöße sind über die Funktion “Sicherheitsvorfall” des ISMS
-zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.</p>
+<h3 id="passwortmanager-und-sicherer-fileserver">Passwortmanager und
+sicherer Fileserver</h3>
+<p><mark>Zur einfachen Verwaltung für jeden Mitarbeiter hat K7 den
+Passwortmanager Psono eingerichtet.</mark>Er ist erreichbar über <a
+href="https://pw.k-7.eu">pw.k-7.eu</a>. Er ist außerdem als “Psono
+Password Manager” in den Appstores von iOS und Android verfügbar.</p>
+<p><mark>Die Psono Plattform stellt außerdem einen sicheren Fileserver
+bereit, der für den Austausch von vertraulichen Daten genutzt werden
+sollte.</mark></p>
+<h4 id="information-virenprüfung">Information Virenprüfung</h4>
+<p>Übertragene Informationen werden vor dem Versand oder vor dem Öffnen
+beim Empfang auf Viren geprüft.</p>
+<h4 id="verschlüsselung-von-informationen">Verschlüsselung von
+Informationen</h4>
+<p>Persönliche und vertrauliche Informationen werden immer
+verschlüsselt, bevor sie übertragen werden.</p>
+<p>Die Verschlüsselungsdaten für den Benutzernamen und das Kennwort
+werden über zwei getrennte und unterschiedliche Kommunikationsmethoden
+weitergegeben. Die bevorzugte Methode ist die Weitergabe des
+Benutzernamens per E-Mail und des Passworts per Sprachanruf.</p>
+<h3 id="methoden-der-datenübertragung">Methoden der
+Datenübertragung</h3>
+<h4 id="bevorzugte-übertragungsmethoden">Bevorzugte
+Übertragungsmethoden</h4>
+<p>Die bevorzugte Übertragungsmethode ist der Dateitransfer über den
+Psono Fileserver.</p>
+<h4 id="datenübertragung-per-e-mail">Datenübertragung per E-Mail</h4>
+<p>E-Mail ist nie die beste Lösung für die Übermittlung von
+Informationen, da sie nicht sicher ist und die Zustellung nicht
+garantiert werden kann.</p>
+<p>Wo immer möglich und praktikabel, wird eine alternative sichere
+Methode zur Übermittlung sensibler Daten in Betracht gezogen.</p>
+<p>E-Mail-Kommunikation sollte nicht zur unverschlüsselten Übermittlung
+persönlicher oder vertraulicher Informationen verwendet werden.</p>
+<p>E-Mail-Nachrichten müssen eindeutige Hinweise auf die
+Verantwortlichkeiten des Empfängers und Anweisungen darüber enthalten,
+was zu tun ist, wenn er nicht der richtige Empfänger ist.</p>
+<p>Es muss darauf geachtet werden, welche Informationen in der
+Betreffzeile der E-Mail oder in der begleitenden Nachricht enthalten
+sind. Dateiname oder Betreffzeile dürfen nicht den vollständigen Inhalt
+von Anhängen oder sensible persönliche Daten preisgeben.</p>
+<p>Die Verwendung eines persönlichen E-Mail-Kontos ist nicht
+gestattet.</p>
+<h4 id="datenübermittlung-per-postkurier">Datenübermittlung per
+Post/Kurier</h4>
+<p>Datenübertragungen, die über physische Medien wie Papierberichte,
+Speicherkarten oder CDs erfolgen, dürfen nur über einen vom Unternehmen
+zugelassenen sicheren Kurierdienst versandt werden, der bei der
+Zustellung einen Abholbeleg und eine Unterschrift erhält.</p>
+<p>Der Empfänger sollte deutlich auf dem Paket angegeben sein, und die
+physischen Datenträger müssen sicher verpackt sein, damit sie nicht
+brechen oder reißen.</p>
+<p>Der Empfänger sollte im Voraus darüber informiert werden, dass die
+Informationen versandt werden, damit er weiß, wann er sie erwarten
+kann.</p>
+<p>Der Empfänger muss den sicheren Empfang bestätigen, sobald die
+Informationen eingetroffen sind. Der Absender, der für den Versand der
+Daten verantwortlich ist, muss den sicheren Empfang der Daten
+bestätigen.</p>
+<h4
+id="datenübertragungen-auf-wechselmedienspeichersticks">Datenübertragungen
+auf Wechselmedien/Speichersticks</h4>
+<p>Nur firmeneigene Wechseldatenträger dürfen für die Übertragung von
+Informationen gemäß den Richtlinien verwendet werden. Die Nutzung der
+Geräte ist genehmigt, im Werteregister verzeichnet, sie sind
+entsprechend zugewiesen und verschlüsselt.</p>
+<p>Die Wechseldatenträger müssen nach Abschluss der Übertragung an den
+Eigentümer zurückgegeben werden, und die übertragenen Daten müssen nach
+der Verwendung sicher vom Speichermedium gelöscht werden. Das
+Werteregister muss aktualisiert werden.</p>
+<p>Es müssen klare Anweisungen über die Zuständigkeiten des Empfängers
+und darüber gegeben werden, was zu tun ist, wenn er nicht der
+vorgesehene Empfänger ist.</p>
+<p>Eine begleitende Nachricht oder ein Dateiname darf den Inhalt des
+Datenträgers nicht preisgeben.</p>
+<p>Das für die <strong>Datenübermittlung per Post/Kurier</strong>
+beschriebene Verfahren muss eingehalten werden.</p>
+<h4 id="telefone-mobiltelefone-und-allgemeine-unterhaltungen">Telefone,
+Mobiltelefone und allgemeine Unterhaltungen</h4>
+<p>Da Telefongespräche (absichtlich oder versehentlich) abgehört,
+mitgehört oder abgefangen werden können, sind folgende
+Vorsichtsmaßnahmen zu treffen: - Achten Sie auf Ihre Umgebung,
+insbesondere in öffentlichen Verkehrsmitteln wie Zügen und an
+öffentlichen Orten wie Cafés, wenn Sie persönliche, vertrauliche oder
+anderweitig sensible Informationen besprechen. - Personenbezogene Daten
+dürfen nur dann telefonisch übermittelt oder besprochen werden, wenn Sie
+die Identität und Berechtigung des Empfängers bestätigt haben. -
+Hinterlassen Sie auf dem Anrufbeantworter keine sensiblen oder
+vertraulichen Nachrichten und geben Sie keine persönlichen Daten an.
+Geben Sie nur eine Kontaktmöglichkeit an und warten Sie darauf, dass der
+Empfänger Sie persönlich anspricht. - Achten Sie beim Abhören von
+Nachrichten, die Sie für sich selbst hinterlassen haben, darauf, dass
+Sie sie nicht in offenen Räumen abspielen, da sonst die Gefahr besteht,
+dass andere sie mithören. Löschen Sie sie sofort nach dem Abhören.</p>
+<h4 id="datenübertragungen-über-bluetooth">Datenübertragungen über
+Bluetooth</h4>
+<p>Bluetooth ist nicht als Kommunikationsmethode für unverschlüsselte
+vertrauliche, persönliche oder anderweitig sensible Daten
+zugelassen.</p>
+<ul>
+<li>Stellen Sie sicher, dass bei allen Zugriffen eine gegenseitige
+Geräteauthentifizierung durchgeführt wird.</li>
+<li>Aktivieren Sie die Verschlüsselung für alle
+Broadcast-Übertragungen</li>
+<li>Konfigurieren Sie die Verschlüsselungsschlüssel auf die maximal
+zulässige Größe.</li>
+<li>Legen Sie eine minimale Schlüsselgröße für jeden
+Schlüsselaushandlungsprozess fest. Die Schlüssel sollten mindestens 128
+Bit lang sein.</li>
+<li>Für Bluetooth: Verwenden Sie Authentifizierung auf Anwendungsebene
+(oberhalb des Bluetooth-Stacks) und Verschlüsselung für sensible
+Datenkommunikation wie SSL.</li>
+<li>Führen Sie das Pairing so selten wie möglich durch, idealerweise in
+einem sicheren Bereich, in dem Angreifer die Eingabe des Passkeys nicht
+beobachten und Bluetooth-Pairing-Nachrichten nicht abfangen können.</li>
+<li>Hinweis: Ein “gesicherter Bereich” ist definiert als ein
+nicht-öffentlicher Bereich, der sich in geschlossenen Räumen und nicht
+an Fenstern befindet, an Orten mit physischen Zugangskontrollen.</li>
+<li>Benutzer sollten nicht auf Nachrichten antworten, in denen eine PIN
+verlangt wird, es sei denn, der Benutzer hat ein Pairing initiiert und
+ist sicher, dass die PIN-Anfrage von einem der Geräte des Benutzers
+gesendet wird.</li>
+<li>Verwenden Sie nur die Sicherheitsmodi 3 und 4. Die Modi 1 und 2
+sollten nicht erlaubt sein Sicherheitsmodus 3 wird bevorzugt, aber
+v.2.1-Geräte können Sicherheitsmodus 3 nicht verwenden.</li>
+<li>Nutzer sollten keine Übertragungen jeglicher Art von unbekannten
+oder verdächtigen Geräten akzeptieren. Zu dieser Art von Übertragungen
+gehören Nachrichten, Dateien oder Bilder.</li>
+<li>Alle Bluetooth-Profile mit Ausnahme des seriellen
+Schnittstellenprofils sollten immer deaktiviert sein, und der Benutzer
+sollte sie nicht aktivieren können.</li>
+</ul>
+<h3 id="verlorene-oder-fehlende-informationen">Verlorene oder fehlende
+Informationen</h3>
+<p>Wenn entdeckt oder vermutet wird, dass Informationen verloren
+gegangen sind, fehlen, nicht angekommen sind oder an die falsche Person
+gegangen sind, muss der Mitarbeiter oder der externe Nutzer mindestens
+einen seiner Vorgesetzten, das Informationssicherheitsmanagementteam,
+das Management Review Team oder das Senior Management Team unverzüglich
+informieren, woraufhin das Verfahren zur Meldung von
+Datenschutzverletzungen des Unternehmens angewendet wird.</p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"
 role="doc-endnotes">
 <hr />
