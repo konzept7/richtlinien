@@ -20,7 +20,7 @@ ForEach ($File in $Files) {
     $Name = $File.Name -replace "_", " " -replace "\.md", ""
     $Name = $Name -replace "..\/richtlinien\/", ""
     Write-Host "Füge $Name zur index.html hinzu"
-    $Link = "<a href=`"richtlinien/$($File.Name -replace "\.md", ".html")`" class=`"overview`">$Name</a><br>"
+    $Link = "<a href=`"static/$($File.Name -replace "\.md", ".html")`" class=`"overview`">$Name</a><br>"
     Add-Content -Path '../index.html' -Value $Link
 }
 
