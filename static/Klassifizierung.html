@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Klassifizierung</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Kufam:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Kufam:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');  
+
+  .title {
+      -webkit-tap-highlight-color: transparent;
+      text-decoration: underline 0.2em rgb(250, 208, 56);
+      font-family: Kufam;
+      font-size: 2.25em;
+      line-height: 1em;
+      margin: 0.5em 0px;
+      font-weight: 900;
+      text-underline-offset: -0.28em;
+      text-underline-position: under;
+      text-decoration-skip-ink: none;
+      color: rgb(255, 255, 255);
+  }
+  .description {
+      font-family: Karla;
+      font-size: 0.85em;
+      line-height: 1.5em;
+      margin: 0.5em 0px;
+      font-weight: 400;
+      color: rgb(144, 146, 150);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Karla, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color : rgb(26, 27, 30);
+    color: rgb(193, 194, 197);
+  }
+
+  body {
+    padding: 1rem;
+    max-width: 1024px;
+
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, Courier New, monospace
+  }
+
+  a {
+    color: rgb(193, 194, 197);
+    text-decoration: none;
+  }
+
+  a.overview {
+    font-size: 1.25rem;
+    line-height: 1.5em;
+  }
+
+  a:hover {
+    text-decoration: underline
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Kufam, Arial, sans-serif
+  }
+
+  .pl-c {
+    color: #6a737d;
+  }
+
+  .pl-c1,
+  .pl-s .pl-v {
+    color: #005cc5;
+  }
+
+  .pl-e,
+  .pl-en {
+    color: #6f42c1;
+  }
+
+  .pl-s .pl-s1,
+  .pl-smi {
+    color: #24292e;
+  }
+
+  .pl-ent {
+    color: #22863a;
+  }
+
+  .pl-k {
+    color: #d73a49;
+  }
+
+  .pl-pds,
+  .pl-s,
+  .pl-s .pl-pse .pl-s1,
+  .pl-sr,
+  .pl-sr .pl-cce,
+  .pl-sr .pl-sra,
+  .pl-sr .pl-sre {
+    color: #032f62;
+  }
+
+  .pl-smw,
+  .pl-v {
+    color: #e36209;
+  }
+
+  .pl-bu {
+    color: #b31d28;
+  }
+
+  .pl-ii {
+    background-color: #b31d28;
+    color: #fafbfc;
+  }
+
+  .pl-c2 {
+    background-color: #d73a49;
+    color: #fafbfc;
+  }
+
+  .pl-c2:before {
+    content: "^M";
+  }
+
+  .pl-sr .pl-cce {
+    color: #22863a;
+    font-weight: 700;
+  }
+
+  .pl-ml {
+    color: #735c0f;
+  }
+
+  .pl-mh,
+  .pl-mh .pl-en,
+  .pl-ms {
+    color: #005cc5;
+    font-weight: 700;
+  }
+
+  .pl-mi {
+    color: #24292e;
+    font-style: italic;
+  }
+
+  .pl-mb {
+    color: #24292e;
+    font-weight: 700;
+  }
+
+  .pl-md {
+    background-color: #ffeef0;
+    color: #b31d28;
+  }
+
+  .pl-mi1 {
+    background-color: #f0fff4;
+    color: #22863a;
+  }
+
+  .pl-mc {
+    background-color: #ffebda;
+    color: #e36209;
+  }
+
+  .pl-mi2 {
+    background-color: #005cc5;
+    color: #f6f8fa;
+  }
+
+  .pl-mdr {
+    color: #6f42c1;
+    font-weight: 700;
+  }
+
+  .pl-ba {
+    color: #586069;
+  }
+
+  .pl-sg {
+    color: #959da5;
+  }
+
+  .pl-corl {
+    color: #032f62;
+    text-decoration: underline;
+  }
+
+  details {
+    display: block;
+  }
+
+  summary {
+    display: list-item;
+  }
+
+  a {
+    background-color: transparent;
+  }
+
+  a:active,
+  a:hover {
+    outline-width: 0;
+  }
+
+  strong {
+    font-weight: inherit;
+    font-weight: bolder;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin: .67em 0;
+  }
+
+  img {
+    border-style: none;
+  }
+
+  code,
+  kbd,
+  pre {
+    font-family: monospace,monospace;
+    font-size: 1em;
+  }
+
+  hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+  }
+
+  input {
+    font: inherit;
+    margin: 0;
+  }
+
+  input {
+    overflow: visible;
+  }
+
+  [type=checkbox] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  hr {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #dfe2e5;
+    height: 0;
+    margin: 15px 0;
+    overflow: hidden;
+  }
+
+  hr:before {
+    content: "";
+    display: table;
+  }
+
+  hr:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: "100%";
+  }
+
+  td,
+  th {
+    padding: 0;
+  }
+
+  details summary {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h1,
+  h2 {
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h3,
+  h4 {
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h5,
+  h6 {
+    font-weight: 600;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+
+  p {
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  blockquote {
+    margin: 0;
+  }
+
+  ol,
+  ul {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  ol ol,
+  ul ol {
+    list-style-type: lower-roman;
+  }
+
+  ol ol ol,
+  ol ul ol,
+  ul ol ol,
+  ul ul ol {
+    list-style-type: lower-alpha;
+  }
+
+  dd {
+    margin-left: 0;
+  }
+
+  code,
+  pre {
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-size: 12px;
+  }
+
+  pre {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+
+  .border {
+    border: 1px solid #e1e4e8!important;
+  }
+
+  .border-0 {
+    border: 0!important;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid #e1e4e8!important;
+  }
+
+  .rounded-1 {
+    border-radius: 3px!important;
+  }
+
+  .bg-white {
+    background-color: #fff!important;
+  }
+
+  .bg-gray-light {
+    background-color: #fafbfc!important;
+  }
+
+  .text-gray-light {
+    color: #6a737d!important;
+  }
+
+  .mb-0 {
+    margin-bottom: 0!important;
+  }
+
+  .my-2 {
+    margin-bottom: 8px!important;
+    margin-top: 8px!important;
+  }
+
+  .pl-0 {
+    padding-left: 0!important;
+  }
+
+  .py-0 {
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+  }
+
+  .pl-1 {
+    padding-left: 4px!important;
+  }
+
+  .pl-2 {
+    padding-left: 8px!important;
+  }
+
+  .py-2 {
+    padding-bottom: 8px!important;
+    padding-top: 8px!important;
+  }
+
+  .pl-3,
+  .px-3 {
+    padding-left: 16px!important;
+  }
+
+  .px-3 {
+    padding-right: 16px!important;
+  }
+
+  .pl-4 {
+    padding-left: 24px!important;
+  }
+
+  .pl-5 {
+    padding-left: 32px!important;
+  }
+
+  .pl-6 {
+    padding-left: 40px!important;
+  }
+
+  .f6 {
+    font-size: 12px!important;
+  }
+
+  .lh-condensed {
+    line-height: 1.25!important;
+  }
+
+  .text-bold {
+    font-weight: 600!important;
+  }
+
+  a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  blockquote,
+  dl,
+  ol,
+  p,
+  pre,
+  table,
+  ul {
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
+
+  hr {
+    background-color: #e1e4e8;
+    border: 0;
+    height: .25em;
+    margin: 24px 0;
+    padding: 0;
+  }
+
+  blockquote {
+    border-left: .25em solid #dfe2e5;
+    color: #6a737d;
+    padding: 0 1em;
+  }
+
+  blockquote>:first-child {
+    margin-top: 0;
+  }
+
+  blockquote>:last-child {
+    margin-bottom: 0;
+  }
+
+  kbd {
+    background-color: #fafbfc;
+    border: 1px solid #c6cbd1;
+    border-bottom-color: #959da5;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #959da5;
+    color: #444d56;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 16px;
+    margin-top: 24px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h1,
+  h2 {
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: .3em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  h5 {
+    font-size: .875em;
+  }
+
+  h6 {
+    color: #6a737d;
+    font-size: .85em;
+  }
+
+  ol,
+  ul {
+    padding-left: 2em;
+  }
+
+  ol ol,
+  ol ul,
+  ul ol,
+  ul ul {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  li {
+    word-wrap: break-all;
+  }
+
+  li>p {
+    margin-top: 16px;
+  }
+
+  li+li {
+    margin-top: .25em;
+  }
+
+  dl {
+    padding: 0;
+  }
+
+  dl dt {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 16px;
+    padding: 0;
+  }
+
+  dl dd {
+    margin-bottom: 16px;
+    padding: 0 16px;
+  }
+
+  table {
+    display: block;
+    overflow: auto;
+    width: 100%;
+  }
+
+  table th {
+    font-weight: 600;
+  }
+
+  table td,
+  table th {
+    border: 1px solid #000000;
+    padding: 6px 13px;
+  }
+
+  table tr {
+    background-color : rgb(26, 27, 30);
+    border-top: 1px solid #393a3b;
+  }
+
+  table tr:nth-child(2n) {
+    background-color : rgb(51, 52, 55);
+  }
+
+  img {
+    background-color: #fff;
+    box-sizing: content-box;
+    max-width: 100%;
+  }
+
+  img[align=right] {
+    padding-left: 20px;
+  }
+
+  img[align=left] {
+    padding-right: 20px;
+  }
+
+  code {
+    background-color: rgba(27,31,35,.05);
+    border-radius: 3px;
+    font-size: 85%;
+    margin: 0;
+    padding: .2em .4em;
+  }
+
+  pre {
+    word-wrap: normal;
+  }
+
+  pre>code {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    word-break: normal;
+  }
+
+  .highlight {
+    margin-bottom: 16px;
+  }
+
+  .highlight pre {
+    margin-bottom: 0;
+    word-break: normal;
+  }
+
+  .highlight pre,
+  pre {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    font-size: 85%;
+    line-height: 1.45;
+    overflow: auto;
+    padding: 16px;
+  }
+
+  pre code {
+    background-color: transparent;
+    border: 0;
+    display: inline;
+    line-height: inherit;
+    margin: 0;
+    max-width: auto;
+    overflow: visible;
+    padding: 0;
+    word-wrap: normal;
+  }
+
+  .commit-tease-sha {
+    color: #444d56;
+    display: inline-block;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-size: 90%;
+  }
+
+  .blob-wrapper {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .blob-wrapper-embedded {
+    max-height: 240px;
+    overflow-y: auto;
+  }
+
+  .blob-num {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    color: rgba(27,31,35,.3);
+    cursor: pointer;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-size: 12px;
+    line-height: 20px;
+    min-width: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: right;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  .blob-num:hover {
+    color: rgba(27,31,35,.6);
+  }
+
+  .blob-num:before {
+    content: attr(data-line-number);
+  }
+
+  .blob-code {
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    vertical-align: top;
+  }
+
+  .blob-code-inner {
+    color: #24292e;
+    font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    font-size: 12px;
+    overflow: visible;
+    white-space: pre;
+    word-wrap: normal;
+  }
+
+  .pl-token.active,
+  .pl-token:hover {
+    background: #ffea7f;
+    cursor: pointer;
+  }
+
+  kbd {
+    background-color: #fafbfc;
+    border: 1px solid #d1d5da;
+    border-bottom-color: #c6cbd1;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 #c6cbd1;
+    color: #444d56;
+    display: inline-block;
+    font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+    line-height: 10px;
+    padding: 3px 5px;
+    vertical-align: middle;
+  }
+
+  :checked+.radio-label {
+    border-color: #0366d6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tab-size[data-tab-size="1"] {
+    -moz-tab-size: 1;
+    tab-size: 1;
+  }
+
+  .tab-size[data-tab-size="2"] {
+    -moz-tab-size: 2;
+    tab-size: 2;
+  }
+
+  .tab-size[data-tab-size="3"] {
+    -moz-tab-size: 3;
+    tab-size: 3;
+  }
+
+  .tab-size[data-tab-size="4"] {
+    -moz-tab-size: 4;
+    tab-size: 4;
+  }
+
+  .tab-size[data-tab-size="5"] {
+    -moz-tab-size: 5;
+    tab-size: 5;
+  }
+
+  .tab-size[data-tab-size="6"] {
+    -moz-tab-size: 6;
+    tab-size: 6;
+  }
+
+  .tab-size[data-tab-size="7"] {
+    -moz-tab-size: 7;
+    tab-size: 7;
+  }
+
+  .tab-size[data-tab-size="8"] {
+    -moz-tab-size: 8;
+    tab-size: 8;
+  }
+
+  .tab-size[data-tab-size="9"] {
+    -moz-tab-size: 9;
+    tab-size: 9;
+  }
+
+  .tab-size[data-tab-size="10"] {
+    -moz-tab-size: 10;
+    tab-size: 10;
+  }
+
+  .tab-size[data-tab-size="11"] {
+    -moz-tab-size: 11;
+    tab-size: 11;
+  }
+
+  .tab-size[data-tab-size="12"] {
+    -moz-tab-size: 12;
+    tab-size: 12;
+  }
+
+  .task-list-item {
+    list-style-type: none;
+  }
+
+  .task-list-item+.task-list-item {
+    margin-top: 3px;
+  }
+
+  .task-list-item input {
+    margin: 0 .2em .25em -1.6em;
+    vertical-align: middle;
+  }
+
+  hr {
+    border-bottom-color: #eee;
+  }
+
+  .pl-0 {
+    padding-left: 0!important;
+  }
+
+  .pl-1 {
+    padding-left: 4px!important;
+  }
+
+  .pl-2 {
+    padding-left: 8px!important;
+  }
+
+  .pl-3 {
+    padding-left: 16px!important;
+  }
+
+  .pl-4 {
+    padding-left: 24px!important;
+  }
+
+  .pl-5 {
+    padding-left: 32px!important;
+  }
+
+  .pl-6 {
+    padding-left: 40px!important;
+  }
+
+  .pl-7 {
+    padding-left: 48px!important;
+  }
+
+  .pl-8 {
+    padding-left: 64px!important;
+  }
+
+  .pl-9 {
+    padding-left: 80px!important;
+  }
+
+  .pl-10 {
+    padding-left: 96px!important;
+  }
+
+  .pl-11 {
+    padding-left: 112px!important;
+  }
+
+  .pl-12 {
+    padding-left: 128px!important;
+  }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="richtlinie-klassifizierung-von-informationen">Richtlinie:
+Klassifizierung von Informationen</h1>
+<h3 id="änderungshistorie">Änderungshistorie</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Status</th>
+<th>Datum</th>
+<th>Autor</th>
+<th>Bemerkung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1.0.0</td>
+<td>Entwurf</td>
+<td>16. 01. 2023</td>
+<td>FB</td>
+<td>Ersterstellung</td>
+</tr>
+</tbody>
+</table>
+<h2 id="zweck">Zweck</h2>
+<p>Zweck dieser Richtlinie ist es, die korrekte Einstufung und
+Handhabung von Informationen auf der Grundlage ihrer Einstufung zu
+gewährleisten.</p>
+<h2 id="adressaten">Adressaten</h2>
+<table>
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 20%" />
+<col style="width: 18%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Adressatenkreis</th>
+<th style="text-align: center;">Kenntnisnahme<a href="#fn1"
+class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a></th>
+<th style="text-align: center;">Bestätigung<a href="#fn2"
+class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a></th>
+<th>Weitere Bemerkungen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Alle Mitarbeiter:innen</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Server, Datenbanken, Fileshares</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Endgeräte</td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Externe Nutzer:in<a href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Anonym <a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="grundsatz">Grundsatz</h2>
+<p>Informationen sollten in Bezug auf rechtliche Anforderungen, Wert,
+Kritikalität und Empfindlichkeit gegenüber unbefugter Offenlegung oder
+Änderung klassifiziert werden.</p>
+<h2 id="kriterien">Kriterien</h2>
+<h3 id="vertrauliche-informationen-und-die-dsgvo">Vertrauliche
+Informationen und die DSGVO</h3>
+<p>Folgende Informationen werden als vertraulich eingestuft: - Die
+Offenlegung hat kurzfristig erhebliche Auswirkungen auf den Betrieb oder
+die strategischen Ziele. - Die Offenlegung hat schwerwiegende
+Auswirkungen auf langfristige strategische Ziele oder gefährdet das
+Überleben der Organisation.</p>
+<p>Vertrauliche Informationen sind für das Unternehmen von erheblichem
+Wert, und eine unbefugte Offenlegung oder Verbreitung könnte dem
+Unternehmen schweren finanziellen Schaden zufügen oder seinen Ruf
+schädigen, den Widerruf von Verträgen zur Folge haben und dazu führen,
+dass es bei künftigen Ausschreibungen keinen Zuschlag erhält.</p>
+<p>Daten, die in der Datenschutz-Grundverordnung als besondere
+Kategorien personenbezogener Daten definiert sind, fallen in diese
+Kategorie.</p>
+<h4 id="beispiele-für-vertrauliche-informationen">Beispiele für
+vertrauliche Informationen</h4>
+<p>Die DSGVO definiert besondere Kategorien personenbezogener Daten:</p>
+<ul>
+<li>rassische/ethnische Herkunft</li>
+<li>politische Meinung</li>
+<li>religiöse Überzeugungen</li>
+<li>Gewerkschaftsmitgliedschaft</li>
+<li>körperlicher/geistiger Gesundheitszustand</li>
+<li>Sexualleben</li>
+<li>Vorstrafenregister</li>
+</ul>
+<p>Auch</p>
+<ul>
+<li>Gehaltsinformationen</li>
+<li>Bankdaten von Einzelpersonen</li>
+<li>Passwörter</li>
+<li>Große Mengen von in der DSGVO definierten personenbezogenen Daten
+(&gt;1000 Datensätze), einschließlich Elementen wie Name, Adresse,
+Telefonnummer</li>
+<li>Daten des HR-Systems</li>
+<li>Unternehmensspezifische, geschützte Informationen, die einzigartig
+und grundlegend für den Betrieb des Unternehmens sind.</li>
+</ul>
+<p><mark>Vertrauliche Informationen sind als solche zu
+kennzeichen.</mark></p>
+<h3 id="interne-informationen">Interne Informationen</h3>
+<p>Folgende Informationen werden als intern eingestuft:</p>
+<ul>
+<li>Die Offenlegung verursacht geringfügige betriebliche
+Unannehmlichkeiten</li>
+</ul>
+<h4 id="interne-informationen-und-die-dsgvo">Interne Informationen und
+die DSGVO</h4>
+<p>Interne Informationen sind für bestimmte Personengruppen innerhalb
+des Unternehmens zugänglich.</p>
+<p>Informationen, die in der Datenschutz-Grundverordnung als
+personenbezogene Daten definiert sind, fallen in diese Kategorie, z. B.
+Namen, E-Mail-Adressen, Telefonnummern, Fotos. Wenn die Informationen
+nicht in die Kategorien “vertraulich” oder “öffentlich” fallen, handelt
+es sich um “interne” Informationen.</p>
+<p>Eine öffentliche Bekanntgabe oder Verbreitung dieser Informationen
+ist nicht beabsichtigt und kann zu Geldstrafen sowie zu einem
+Reputationsverlust für das Unternehmen führen.</p>
+<p>Beispiele für interne Informationen</p>
+<p>Der Großteil der Unternehmensinformationen fällt in diese Kategorie.
+Protokolle, Pläne, Schulungsunterlagen, Managementberichte, interne
+Mitteilungen, Kundenlisten, Auftragshistorien, Informationen die nicht
+explizit als “vertraulich” gekennzeichnet sind.</p>
+<h4 id="beispiele-für-interne-informationen">Beispiele für interne
+Informationen</h4>
+<ul>
+<li>Name</li>
+<li>E-Mail</li>
+<li>Arbeitsort</li>
+<li>Telefonnummer am Arbeitsplatz</li>
+<li>Fotos</li>
+<li>Weitere Beispiele:
+<ul>
+<li>Entwürfe von Berichten, Dokumenten und Protokollen</li>
+<li>Systeme</li>
+<li>interne Korrespondenz</li>
+<li>Informationen, die unter Lizenz gehalten werden</li>
+<li>Unternehmensrichtlinien und -verfahren</li>
+</ul></li>
+</ul>
+<h2 id="vorgaben">Vorgaben</h2>
+<h4 id="speicherung-von-informationen">Speicherung von
+Informationen</h4>
+<p>Unternehmensinformationen dürfen nicht auf persönlichen Geräten oder
+Systemen gespeichert werden, einschließlich persönlicher E-Mails und
+Cloud-basierter Speicher, es sei denn, dies wurden von der
+Geschäftsleitung genehmigt und die entsprechende Person ist in einem
+Verzeichnis der zugelassenen Nutzer erfasst.</p>
+<h4 id="zugangskontrolle">Zugangskontrolle</h4>
+<p>Unternehmensinformationen dürfen nicht frei zugänglich sind durch
+eine Zugangskontrolle zu schützen, die in der Richtlinie zur
+Zugangskontrolle festgelegt ist.</p>
+<h4 id="speicherung-vertraulicher-informationen">Speicherung
+vertraulicher Informationen</h4>
+<ul>
+<li>Vertrauliche Informationen müssen innerhlab und außerhalb der
+Primärsysteme des Unternehmens sicher verschlüsselt werden.</li>
+<li>Die dazugehörigen Schlüssel dürfen nicht auf gleichem Weg versendet
+werden wie die eigentliche Information.
+<ul>
+<li>Es ist beispielsweise nicht zulässig eine verschlüsselte Datei per
+Email zu versenden und das Passwort ebenfalls per Email
+mitzuschicken.</li>
+<li>Vorgesehenes Verfahren: Upload über <a
+href="https://pw.k-7.eu">sicheren Fileserver</a> und mit Passwort
+sichern. Passwort anschließend telefonisch oder persönlich
+mitteilen.</li>
+</ul></li>
+<li>Physisch gespeicherte vertrauliche Informationen sind als solche zu
+kennzeichnen (mithilfe eines Stempels “Vertraulich”)</li>
+<li>Die physische Übermittlung von Geräten mit vertraulichen
+Informationen erfolgt entweder persönlich oder über einen registrierten,
+sicheren Kurierdienst.</li>
+<li>Vertrauliche Informationen dürfen nicht über öffentliche Netze
+übertragen werden.</li>
+</ul>
+<h4 id="kontrolle-von-geräten-und-medien">Kontrolle von Geräten und
+Medien</h4>
+<ul>
+<li>Das Speichern von vertraulichen Informationen in physischer Form ist
+nach Möglichkeit zu vermeiden.</li>
+<li>Alle elektronischen und Papiermedien, die vertrauliche Informationen
+enthalten, werden physisch vor unbefugtem Zugriff gesichert, indem sie
+in verschlossenen Schubladen, Schränken und/oder Räumen aufbewahrt
+werden.</li>
+<li>Es gibt Register für Informationsbestände, die mindestens einmal
+jährlich überprüft werden.</li>
+</ul>
+<h4 id="backups">Backups</h4>
+<p>Backups unterliegen den gleichen Vorgaben hinsichtlich
+Verschlüsselung und Zugangskontrolle wie Originaldaten.</p>
+<h4 id="vernichtung">Vernichtung</h4>
+<h5 id="papierunterlagen">Papierunterlagen</h5>
+<ul>
+<li>Papierunterlagen, die interne und vertrauliche Informationen
+enthalten, werden nach einem Standard, der mindestens der DIN32757 Stufe
+4 entspricht, vernichtet oder in den dafür vorgesehenen Behältern für
+vertraulichen Abfall entsorgt.</li>
+<li>Öffentliche Papierunterlagen können recycelt oder in den allgemeinen
+Abfall gegeben werden.</li>
+</ul>
+<h4 id="vernichtung-von-elektronischen-informationen">Vernichtung von
+elektronischen Informationen</h4>
+<ul>
+<li>Alle Datenträger und Geräte, die interne oder vertrauliche
+Informationen enthalten können, werden vor der Vernichtung oder
+Wiederverwendung mindestens nach der DoD 5220.22-M 3-Pass-Methode oder
+einer gleichwertigen Methode gelöscht.</li>
+<li>Protokolle der Löschvorgänge werden, soweit möglich, von der
+Anwendung geführt.</li>
+</ul>
+<h4 id="vernichtung-elektronischer-mediengeräte">Vernichtung
+elektronischer Medien/Geräte</h4>
+<ul>
+<li>Elektronische Medien und Geräte, die interne oder vertrauliche
+Informationen enthalten können, werden von zugelassenen, spezialisierten
+Drittanbietern vernichtet.</li>
+<li>Es werden Vernichtungszertifikate beantragt und aufbewahrt, um einen
+vollständigen Prüfpfad zu erhalten.</li>
+<li>Es wird ein Inventar der Geräte, einschließlich der zerstörten,
+geführt.</li>
+</ul>
+<h4 id="klassifizierung">Klassifizierung</h4>
+<p>Vor Projektstart muss schriftlich festgehalten werden, welche Art von
+Informationen verarbeitet wird.</p>
+<p>Um eine einheitliche Übersicht und einfache Klassifizierung zu
+ermöglichen, hat K7 den (Readme-Helper)[https://readme.k-7.eu] angelegt.
+Das Tool dient sowohl der Bereitstellung von Informationen als auch der
+Klassifizierung von im Projekt verwendeten Daten. Änderungen müssen
+damit ebenfalls erfasst werden.</p>
+<p>Die dabei erzeugte readme.md-Datei sowie die readme-meta.json-Datei
+sind flach im Projektverzeichnis abzulegen.</p>
+<p>Es ist jährlich zu überprüfen, dass das Tool den Anforderungen des
+Unternehmens genügt.</p>
+<h4 id="kontrolle">Kontrolle</h4>
+<p>Vertrauliche und interne Informationen unterliegen Zugangskontrollen,
+z. B. indem nur gültige Anmeldungen von Mitarbeitergruppen zugelassen
+werden. Sie müssen so aufbewahrt werden, dass ein unbefugter Zugriff
+verhindert wird, d. h. in einem System, das eine gültige und angemessene
+Anmeldung erfordert, bevor der Zugriff gewährt wird.</p>
+<h2 id="maßnahmen">Maßnahmen</h2>
+<p>Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen
+sichergestellt:</p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 8%" />
+<col style="width: 7%" />
+<col style="width: 5%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Maßnahme</th>
+<th style="text-align: center;">ISMS-Integration</th>
+<th>Verantwortlich</th>
+<th>Turnus</th>
+<th>Beschreibung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sicherer Container für phys. Medien</td>
+<td style="text-align: center;">✔</td>
+<td>GF</td>
+<td>Initial</td>
+<td>Safe oder sichere Schublade für vertrauliche phys. Medien
+anschaffen</td>
+</tr>
+<tr class="even">
+<td>Reißwolf</td>
+<td style="text-align: center;">✔</td>
+<td>GF</td>
+<td>Initial</td>
+<td>Reißwolf zur Vernichtung von vertraulichen Informationen in
+Papierform anschaffen</td>
+</tr>
+<tr class="odd">
+<td>Jährliche Überprüfung Werteregister</td>
+<td style="text-align: center;">✔</td>
+<td>IT, GF</td>
+<td>Jährlich</td>
+<td>Überprüfen des Verzeichnisses physischer Medien</td>
+</tr>
+<tr class="even">
+<td>Sicherer Fileserver</td>
+<td style="text-align: center;">✔</td>
+<td>IT</td>
+<td>Initial</td>
+<td>Anlegen eines sicheren Datenaustausch-Servers, inkl. Verschlüsselung
+und Zugangskontrolle</td>
+</tr>
+<tr class="odd">
+<td>Secure Erase Software</td>
+<td style="text-align: center;">✔</td>
+<td>IT, GF</td>
+<td>Initial</td>
+<td>Anschaffen einer Secure Erase Software</td>
+</tr>
+<tr class="even">
+<td>Readme-Generator anlegen/überprüfen</td>
+<td style="text-align: center;">✔</td>
+<td>IT, GF, PL</td>
+<td>Jährlich</td>
+<td>Hilfstool zum Klassifizieren der verwenden Daten im Projekt
+erstellen und jährlich überprüfen</td>
+</tr>
+<tr class="odd">
+<td>Readme-Generator bei Projektstart und Änderungen</td>
+<td style="text-align: center;">✔</td>
+<td>IT, GF, PL</td>
+<td>Dauerhaft</td>
+<td>Klassifizierung der Informationen mindestens zu Projektstart</td>
+</tr>
+<tr class="even">
+<td>Datenträgerverwaltung über ACL</td>
+<td style="text-align: center;">✔</td>
+<td>IT, GF, PL</td>
+<td>Dauerhaft</td>
+<td>Netzlaufwerke müssen aktiv über Access-Control-Lists verwaltet
+werden</td>
+</tr>
+<tr class="odd">
+<td>Verschlüsselung von Datenträgern</td>
+<td style="text-align: center;">✔</td>
+<td>IT, GF, PL</td>
+<td>Dauerhaft</td>
+<td>Alle Datenträger und Netzlaufwerke müssen wenigstens at-rest
+verschlüsselt werden</td>
+</tr>
+</tbody>
+</table>
+<p><mark>Verstöße sind über die Funktion “Sicherheitsvorfall” des ISMS
+zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.</p>
+<h2 id="glossar">Glossar</h2>
+<dl>
+<dt>ISMS</dt>
+<dd>
+Informationssicherheitssystem
+</dd>
+<dt>ISB</dt>
+<dd>
+Informationssicherheitsbeauftragter
+</dd>
+<dt>QM</dt>
+<dd>
+Qualitätsmanagement
+</dd>
+<dt>KVP</dt>
+<dd>
+Kontinuierlicher Verbesserungsprozess
+</dd>
+<dt>ICS</dt>
+<dd>
+Industrial Control Systems - industrielle Steuerungssysteme
+</dd>
+<dt>OT</dt>
+<dd>
+Operational Technology - Prozessleit- und Automatisierungstechnik
+</dd>
+<dt>GF</dt>
+<dd>
+Geschäftsführung
+</dd>
+<dt>PL</dt>
+<dd>
+Projektleitung
+</dd>
+</dl>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Die Adressaten sind nicht direkt von der Richtlinie
+betroffen, daher müssen Sie nicht über Änderungen informiert werden und
+den Erhalt nicht schriftlich bestätigen.<a href="#fnref1"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Personen: Die Richtlinie ist vom Adressatenkreis
+schriftlich oder elektronisch zu bestätigen. Bei Änderungen muss eine
+Information an den Adressatenkreis erfolgen. Hardware: Überprüfung der
+Einhaltung erfolgt automatisiert oder über wiederkehrende Maßnahme. Bei
+Änderungen erfolgt eine Anpassung der Automation/Maßnahme.<a
+href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Nutzer:innen oder Organisationen, die K7 persönlich
+bekannt sind<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Anonyme Endanwender:innen<a href="#fnref4"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

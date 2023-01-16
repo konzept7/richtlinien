@@ -1206,17 +1206,22 @@ die DSGVO, sicher gesichert.</p>
 beachten:</p>
 <ul>
 <li>Alle unternehmensrelevanten Daten sollten nicht ausschließlich auf
-persönlichen Endgeräten gespeichert werden.
+Unternehmens-Endgeräten gespeichert werden.
 <ul>
 <li>Nach Möglichkeit wird direkt auf Netzlaufwerken/kollaborativen
 Plattformen/Cloud-Storage gearbeitet.</li>
 <li>Sofern nicht möglich oder sinnvoll erfolgt eine tägliche
 Synchronisation selbständig durch den jeweiligen Mitarbeiter.</li>
 </ul></li>
-<li>Verfahren mit integrierter Versionierung zu bevorzugen sind.</li>
-<li><h4
-id="wiederherstellungsverfahren-von-sicherungskopien">Wiederherstellungsverfahren
-von Sicherungskopien</h4></li>
+<li>Verfahren mit integrierter Versionierung sind zu bevorzugen.</li>
+<li>Backups müssen georedundant zum Original gelagert werden
+<ul>
+<li>Backups und Original sollten nicht dem gleichen Umweltrisiko
+(Überschwemmung, Erdbeben etc.) ausgesetzt sein</li>
+</ul></li>
+<li>Für besonders wichtige und kritische Systeme werden mindestens zwei
+Backups angelegt. #### Wiederherstellungsverfahren von
+Sicherungskopien</li>
 </ul>
 <p>Bei der Einrichtung von Servern, Datenbanken, Fileshares,
 Quellcode-Repositories und Entwicklungsumgebungen ist folgendes zu
@@ -1251,8 +1256,8 @@ Sicherheitsanforderungen wie für die Originaldaten.</li>
 Backupsystems eingebauten Verschlüsselung. Backup werden nur in
 Cloud-Lösungen gespeichert, die mindestens die Anforderungen der
 ISO27001 erfüllen.</li>
-<li>Nach Möglichkeit sollte mittels Sensorik bei Nichtdurchführung von
-Backups eine Alarmierung erfolgen.
+<li>Nach Möglichkeit sollte mittels Sensorik beim Scheitern von Backups
+eine Alarmierung erfolgen.
 <ul>
 <li>Besteht diese Möglichkeit nicht, muss die korrekte Erstellung von
 Backups für das jeweilige Verfahren monatlich manuell geprüft

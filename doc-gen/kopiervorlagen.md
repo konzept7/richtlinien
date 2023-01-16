@@ -60,3 +60,15 @@ QM
 
 KVP
 : Kontinuierlicher Verbesserungsprozess
+
+ICS
+: Industrial Control Systems - industrielle Steuerungssysteme
+
+OT
+: Operational Technology - Prozessleit- und Automatisierungstechnik
+
+GF
+: Geschäftsführung
+
+PL
+: Projektleitung

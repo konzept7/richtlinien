@@ -15,8 +15,6 @@ Das kann Verfahren umfassen wie die Verwendung von Verschlüsselung bei der Übe
 
 ## Adressaten
 
-## Adressaten
-
 | Adressatenkreis                 | Kenntnisnahme[^3] | Bestätigung[^4] | Weitere Bemerkungen |
 | ------------------------------- | :---------------: | :-------------: | ------------------- |
 | Alle Mitarbeiter:innen          |         ✔         |        ✔        |                     |
@@ -132,4 +130,18 @@ Bluetooth ist nicht als Kommunikationsmethode für unverschlüsselte vertraulich
 
 ### Verlorene oder fehlende Informationen
  
- Wenn entdeckt oder vermutet wird, dass Informationen verloren gegangen sind, fehlen, nicht angekommen sind oder an die falsche Person gegangen sind, muss der Mitarbeiter oder der externe Nutzer mindestens einen seiner Vorgesetzten, das Informationssicherheitsmanagementteam, das Management Review Team oder das Senior Management Team unverzüglich informieren, woraufhin das Verfahren zur Meldung von Datenschutzverletzungen des Unternehmens angewendet wird.
+ Wenn entdeckt oder vermutet wird, dass Informationen verloren gegangen sind, fehlen, nicht angekommen sind oder an die falsche Person gegangen sind, muss der Mitarbeiter oder der externe Nutzer mindestens einen seiner Vorgesetzten, die Geschäftsführung und den ISB unverzüglich informieren, woraufhin das Verfahren zur Meldung von Datenschutzverletzungen des Unternehmens angewendet wird.
+
+ ## Maßnahmen
+
+ Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergestellt:
+
+ | Maßnahme                            | ISMS-Integration | Verantwortlich | Turnus   | Beschreibung                                                                              |
+ | ----------------------------------- | :--------------: | -------------- | -------- | ----------------------------------------------------------------------------------------- |
+ | Bluetooth sichern                   |        ✔         | IT             | Initial  | Sicherheitsmodi 1 und 2 für Endgeräte sperren                                             |
+ | Awareness-Schulung                  |        ✔         | IT, GF         | Jährlich | Reißwolf zur Vernichtung von vertraulichen Informationen in Papierform anschaffen         |
+ | Jährliche Überprüfung Werteregister |        ✔         | IT, GF         | Jährlich | Überprüfen des Verzeichnisses physischer Medien                                           |
+ | Sicherer Fileserver                 |        ✔         | IT             | Initial  | Anlegen eines sicheren Datenaustausch-Servers, inkl. Verschlüsselung und Zugangskontrolle |
+ | Secure Erase Software               |        ✔         | IT, GF         | Initial  | Anschaffen einer Secure Erase Software                                                    |
+ 
+ <mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.

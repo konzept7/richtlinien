@@ -19,7 +19,7 @@ do
   name=${name/..\/richtlinien\//}
   name=${name%.md}
   echo "Füge $name zur index.html hinzu"
-  echo "<a href="richtlinien/${f%.md}.html" class="overview">$name</a><br>" >> ../index.html
+  echo "<a href=\"static/${f%.md}.html\" class=\"overview\">$name</a><br>" >> ../index.html
 done
 
 # adding footer to index.html

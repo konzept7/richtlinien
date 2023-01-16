@@ -41,11 +41,13 @@ Daten werden gemäßg den Anforderungen an die Datenaufbewahrung den geschäftli
 
 Beim Umgang mit Daten ist für jeden Mitarbeiter folgendes zu beachten:
 
- - Alle unternehmensrelevanten Daten sollten nicht ausschließlich auf persönlichen Endgeräten gespeichert werden.
+ - Alle unternehmensrelevanten Daten sollten nicht ausschließlich auf Unternehmens-Endgeräten gespeichert werden.
    - Nach Möglichkeit wird direkt auf Netzlaufwerken/kollaborativen Plattformen/Cloud-Storage gearbeitet.
    - Sofern nicht möglich oder sinnvoll erfolgt eine tägliche Synchronisation selbständig durch den jeweiligen Mitarbeiter.
- - Verfahren mit integrierter Versionierung zu bevorzugen sind.
- - 
+ - Verfahren mit integrierter Versionierung sind zu bevorzugen.
+ - Backups müssen georedundant zum Original gelagert werden
+   - Backups und Original sollten nicht dem gleichen Umweltrisiko (Überschwemmung, Erdbeben etc.) ausgesetzt sein
+ - Für besonders wichtige und kritische Systeme werden mindestens zwei Backups angelegt.
 #### Wiederherstellungsverfahren von Sicherungskopien
 
 Bei der Einrichtung von Servern, Datenbanken, Fileshares, Quellcode-Repositories und Entwicklungsumgebungen ist folgendes zu beachten:
@@ -62,7 +64,7 @@ Bei der Einrichtung von Servern, Datenbanken, Fileshares, Quellcode-Repositories
 - Sicherungen von Systemen werden mindestens einmal pro Jahr getestet, um sicherzustellen, dass sie verlässlich sind den Anforderungen entsprechend.
 - Backups dürfen nur dem relevanten Personenkreis zur Verfügung gestellt werden. Es gelten mindestens die gleichen Sicherheitsanforderungen wie für die Originaldaten.
 - Backups werden verschlüsselt mit der vom Hersteller des Backupsystems eingebauten Verschlüsselung. Backup werden nur in Cloud-Lösungen gespeichert, die mindestens die Anforderungen der ISO27001 erfüllen.
-- Nach Möglichkeit sollte mittels Sensorik bei Nichtdurchführung von Backups eine Alarmierung erfolgen.
+- Nach Möglichkeit sollte mittels Sensorik beim Scheitern von Backups eine Alarmierung erfolgen.
   - Besteht diese Möglichkeit nicht, muss die korrekte Erstellung von Backups für das jeweilige Verfahren monatlich manuell geprüft werden.
 
 ## Maßnahmen
