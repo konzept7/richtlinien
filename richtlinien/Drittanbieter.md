@@ -3,6 +3,7 @@
 ### Änderungshistorie
 | Version | Status  | Datum        | Autor | Bemerkung      |
 | ------- | ------- | ------------ | ----- | -------------- |
+| 1.1.0   | Entwurf | 12. 01. 2023 | FB    | Überarbeitung |
 | 1.0.0   | Entwurf | 10. 01. 2023 | FB    | Ersterstellung |
 
 ## Zweck
