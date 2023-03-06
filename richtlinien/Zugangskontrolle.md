@@ -100,9 +100,10 @@ Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergeste
 | Maßnahme                           | ISMS-Integration | Verantwortlich           | Turnus          | Beschreibung                                                                |
 | ---------------------------------- | :--------------: | ------------------------ | --------------- | --------------------------------------------------------------------------- |
 | Protokollierung Zugriffe           |                  | IT                       | Dauerhaft       | Systemzugänge werden protokolliert                                          |
-| Protokollierung Konten             |                  | IT                       | Dauerhaft       | Änderungen an Konten werden protokolliert (Erstellung, Löschung, etc...)    |
+| Erfassung Konten                   |                  | IT                       | Dauerhaft       | Änderungen an Konten werden dokumentiert (Erstellung, Löschung, etc...)    |
 | Nutzerkontenprüfung                | ✔                | IT                       | jährlich        | Gegenüberstellung Bedarf und tatsächliche existente Konten                  |
 | Logs prüfen                        | ✔                | IT                       | vierteljährlich | Sichtung Zugangsprotokolle der Systeme                                      |
+
 
 
 <mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.
