@@ -1,4 +1,4 @@
-**Diese Seite wird über GitHub Pages unter [konzept7.github.io/richtlinien](konzept7.github.io/richtlinien) bereitgestellt.**
+**Diese Seite wird über GitHub Pages unter [konzept7.github.io/richtlinien](https://konzept7.github.io/richtlinien) bereitgestellt.**
 
 # Richtlinienübersicht
 
