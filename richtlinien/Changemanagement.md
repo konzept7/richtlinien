@@ -1,6 +1,7 @@
 # Richtlinie: Change-Management
 
 ### Änderungshistorie
+
 | Version | Status  | Datum      | Autor | Bemerkung      |
 | ------- | ------- | ---------- | ----- | -------------- |
 | 1.0.0   | Entwurf | 9. 1. 2023 | FB    | Ersterstellung |
@@ -11,13 +12,14 @@ Diese Richtlinie soll bei Veränderungen im Unternehmen sowohl die Risiken minim
 
 ## Adressaten
 
-| Adressatenkreis                 | Kenntnisnahme[^3] | Bestätigung[^4] | Weitere Bemerkungen |
-| ------------------------------- | :---------------: | :-------------: | ------------------- |
-| Alle Mitarbeiter:innen          |         ✔         |        ✔        |                     |
-| Server, Datenbanken, Fileshares |                   |                 |                     |
-| Endgeräte                       |                   |                 |                     |
-| bek. externe Nutzer:in[^1]      |         ✔         |        ✔        | Falls betroffen     |
-| Anonyme Nutzer:in[^2]           |                   |                 |                     |
+| Adressatenkreis                 | Kenntnisnahme[^3] | Bestätigung[^4] | Weitere Bemerkungen                 |
+| ------------------------------- | :---------------: | :-------------: | ----------------------------------- |
+| Alle Mitarbeiter:innen          |         ✔         |        ✔        |                                     |
+| Dienstanbieter                  |                   |                 | Externe Updates -> Changemanagement |
+| Server, Datenbanken, Fileshares |                   |                 |                                     |
+| Endgeräte                       |                   |                 |                                     |
+| bek. externe Nutzer:in[^1]      |         ✔         |        ✔        | Falls betroffen                     |
+| Anonyme Nutzer:in[^2]           |                   |                 |                                     |
 
 [^1]: Nutzer:innen oder Organisationen, die K7 persönlich bekannt sind
 [^2]: Anonyme Endanwender:innen
@@ -34,6 +36,8 @@ Diese Richtlinie soll bei Veränderungen im Unternehmen sowohl die Risiken minim
 
 Alle Änderungsanträge werden abgelegt.
 
+<!-- Definieren: Was ist ein Change? -->
+
 ### Priorisierung
 
 Die Änderungsanträge werden nach Dringlichkeit, Aufwand und Nutzen sowie den möglichen Auswirkungen auf den Geschäftsbetrieb priorisiert.
@@ -48,12 +52,12 @@ Alle Betroffenen Benutzer werden ausreichend über die Änderung informiert.
 
 ### Einfrieren von Änderungen
 
-Sollte es notwändig sein, kann durch die Geschäftsführung ein Änderungsstopp verabschiedet werden, der auf bestimmte Zeit Änderungen kleiner Prioritäten verhindert. In dieser Zeit werden Änderungen nur mit hoher Priorität freigegeben und umgesetzt.
+Sollte es notwendig sein, kann durch die Geschäftsführung ein Änderungsstopp verabschiedet werden, der auf bestimmte Zeit Änderungen kleiner Prioritäten verhindert. In dieser Zeit werden Änderungen nur mit hoher Priorität freigegeben und umgesetzt.
 
 ### Notfalländerungen
 
-Der reguläre Änderungsprozess kann in dringenden Fällen umgangen werden, um eine Änderung möglichst zügig umzusetzen. Trotzdem sollten Auswirkungen bedacht werden; vor allem muss die Genehmigung und Dokumentation eingehalten werden.
-Die Änderung ist mindest von der Geschäftsleitung freizugeben.
+Der reguläre Änderungsprozess kann in _dringenden und kritischen_ Fällen umgangen werden, um eine Änderung möglichst zügig umzusetzen. Trotzdem sollten Auswirkungen bedacht werden; vor allem muss die Genehmigung und Dokumentation eingehalten werden.
+Die Änderung ist mindestens von der Geschäftsleitung freizugeben.
 
 ## Prozess
 
@@ -80,6 +84,8 @@ Folgende Informationen werden während des Prozesses hinzugefügt/geändert:
 
 ### Änderungsformular
 
+<!-- Wahrscheinlich entfernen, prüfen -->
+
 Jeder Fachbereich darf den Änderungsprozess selbst festlegen, er muss allerdings von der Geschäftsführung freigegeben werden und wird anschließend Bestandteil dieser Richtlinie. Hat ein Fachbereich keinen eigenen Änderungsprozess festgelegt oder ist dieser nicht bekannt, kann <mark>immer</mark> auch das beigestellte Änderungsformular verwendet werden.
 
 Änderungsanträge werden jährlich zentralisiert gesammelt und ausgewertet.
@@ -91,6 +97,8 @@ Jeder Fachbereich darf den Änderungsprozess selbst festlegen, er muss allerding
 Änderungsanträge werden im jeweiligen GitHub-Projekt im Bereich "Issues" erfasst. Die Plattform erfasst dabei automatisch Projekt, Datum und Antragssteller.
 
 Da die Anforderungen an einen Bug sowie einen Änderungsantrag sehr unterschiedlich sind, werden unterschiedliche Vorlagen zur Verfügung gestellt.
+
+<!-- Muss für jedes Projekt neu angelegt werden, daher Link zur Vorlage -->
 
 <mark>Projektverantwortliche stellen sicher, dass die Vorlagen bei Issue-Erstellung für User auswählbar sind.</mark> Eine Anleitung dazu sowie die Vorlagen befinden sich in der Richtlinie "Softwareentwicklung".
 
@@ -117,37 +125,43 @@ Für Changes, die einem erprobten Ablauf folgen und deren Risiken bekannt sind, 
 
 ### Weitere Changes
 
-Als Grundlage für die Erfassung von Änderungen gelten folgende Tabellen
-
+Als Grundlage für die Erfassung von Änderungen gelten folgende Tabellen:
 
 #### Interne Änderungen
 
-| Art der Änderung                        | Change | ISMS relevant | Kein Change |
-| --------------------------------------- | :----: | :-----------: | :---------: |
-| Neue Produkte oder Dienstleistungen     |   ✔    |       ✔       |             |
-| Änderungen in der Organisationsstruktur |   ✔    |       ✔       |             |
-| Änderungen im Führungskreis             |   ✔    |       ✔       |             |
-| Änderungen am Managementsystem          |   ✔    |       ✔       |             |
-| Beteiligungen/Fusionen                  |   ✔    |       ✔       |             |
-| Änderungen an den Serversystemen        |   ✔    |       ✔       |             |
-| Outsourcing an Lieferanten              |   ✔    |       ✔       |             |
-| Verlagerung von Diensten oder Daten     |   ✔    |       ✔       |             |
-| Neue Betriebssysteme                    |   ✔    |       ✔       |             |
-| Neue Entwicklungsumgebungen             |   ✔    |       ✔       |             |
-| Beauftragung Drittanbieter              |   ✔    |       ✔       |             |
-| Bestellung Hardware nicht erfasster Typ |   ✔    |       ✔       |             |
-| Bestellung bereits erfasster Typ        |        |               |      ✔      |
-| Bestellungen Büromaterial/Möbel         |        |               |      ✔      |
-| Beauftragung Reparaturen                |        |               |      ✔      |
- 
+| Art der Änderung                                       | Change | ISMS relevant | Kein Change |
+| ------------------------------------------------------ | :----: | :-----------: | :---------: |
+| Neue Produkte oder Dienstleistungen                    |   ✔    |       ✔       |             |
+| Änderungen in der Organisationsstruktur                |   ✔    |       ✔       |             |
+| Änderungen an Zugangssystemen für physische Sicherheit |   ✔    |       ✔       |             |
+| Änderungen im Führungskreis                            |   ✔    |       ✔       |             |
+| Änderungen am Managementsystem                         |   ✔    |       ✔       |             |
+| Beteiligungen/Fusionen                                 |   ✔    |       ✔       |             |
+
+<!-- genauer definieren -->
+
+| Änderungen an den Serversystemen | ✔ | ✔ | |  
+| Outsourcing an Lieferanten | ✔ | ✔ | |
+| Verlagerung von Diensten oder Daten | ✔ | ✔ | |
+| Neue Betriebssysteme | ✔ | ✔ | |
+
+<!-- nur neue Major-->
+
+| Neue Entwicklungsumgebungen | ✔ | | |  
+| Beauftragung Drittanbieter | ✔ | ✔ | |
+| Bestellung Hardware nicht erfasster Typ | ✔ | ✔ | |
+| Bestellung bereits erfasster Typ | | | ✔ |
+| Bestellungen Büromaterial/Möbel | | | ✔ |
+| Beauftragung Reparaturen | | | ✔ |
+
 #### Von Kunden
 
-| Art der Änderung                       | Change | ISMS relevant | Kein Change |
-| -------------------------------------- | :----: | :-----------: | :---------: |
-| Neue Kundenanforderunge an das ISMS    |   ✔    |       ✔       |             |
-| Neue Kundenanforderung an Schutzbedarf |   ✔    |       ✔       |             |
-| Änderung an Modellen/Zeichnungen       |        |               |      ✔      |
-| Änderungen innerhalb eines Projektes   |        |               |      ✔      |
+| Art der Änderung                         | Change | ISMS relevant | Kein Change |
+| ---------------------------------------- | :----: | :-----------: | :---------: |
+| Neue Kundenanforderungen an das ISMS     |   ✔    |       ✔       |             |
+| Neue Kundenanforderungen an Schutzbedarf |   ✔    |       ✔       |             |
+| Änderung an Modellen/Zeichnungen         |        |               |      ✔      |
+| Änderungen innerhalb eines Projektes     |        |               |      ✔      |
 
 #### Von Lieferanten
 
@@ -166,6 +180,10 @@ Als Grundlage für die Erfassung von Änderungen gelten folgende Tabellen
 | Änderungen von Gesetzen            |   ✔    |       ✔       |             |
 | Änderung bei Behörden              |   ✔    |       ✔       |             |
 | Änderung bei Norm                  |   ✔    |       ✔       |             |
-| Marktveränderungen                 |   ✔    |               |             |
+| Marktveränderungen                 |        |               |      ✔      |
 | Beteiligung/Fusion des Lieferanten |   ✔    |       ✔       |             |
 | Änderung Ansprechpartner           |        |               |      ✔      |
+
+<!-- Softwareentwicklungsbezug -->
+
+<!-- Maßnahmen hinzufügen -->
