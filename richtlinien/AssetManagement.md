@@ -4,12 +4,12 @@
 
 | Version | Status  | Datum      | Autor | Bemerkung      |
 | ------- | ------- | ---------- | ----- | -------------- |
-| 1.1.0   | Entwurf | 30.01.2023 | SG    | Überarbeitung |
+| 1.1.0   | Entwurf | 30.01.2023 | SG    | Überarbeitung  |
 | 1.0.0   | Entwurf | 27.01.2023 | SG    | Ersterstellung |
 
 ## Zweck
 
-Durch diese Richtlinie werden alle dem Unternehmen zugehörigen Geräte für Übertragung und Bearbeitung von Informationen katalogisiert und verwaltet.
+Durch diese Richtlinie werden alle dem Unternehmen zugehörigen Werte katalogisiert und verwaltet.
 
 ## Adressaten
 
@@ -32,38 +32,50 @@ Alle Geräte, die zur Verwaltung, Bearbeitung oder Übertragung von Informatione
 
 ## Bereiche
 
-Die Richtlinie findet Anwendung in jeder Situation, bei der ein Passwort für den Mitarbeiter hinterlegt werden muss oder er dieses vergibt.
-Betroffen sind alle Geräte der Firma, auch die mobilen Endgeräte der Nutzer.
+Die Richtlinien wird für alle Geräte der Firma angewendet und findet auch bei mobilen Endgeräten, die Firmeneigentum darstellen Anwendung.
 
-## Passwort-Management
-Für die Verwaltung der Passworter und um die Einhaltung der Bildungsgesetze sicherzustellen, wird der Passwort-Manager "Psono" zum Einsatz kommen.
-Dieser Passwort-Manager ist mit einer Zwei-Faktor-Authentifizierung ausgestattet, um den Zugriff auf die Passwortliste für Fremde zu erschweren.
-Durch den Passwort-Manager wird vermieden, dass Passwörter unverschlüsselt in Dateien auf der Festplatte abgelegt werden oder gar im Klartext niedergeschrieben werden.
+## Werteregister
 
-## Bildungsgesetz
-Beim Erstellen von Passwörtern sind grundsätzliche folgende Regeln anzuwenden
-1. Die Mindestlänge beträgt 16 Zeichen
-1. Es beinhaltet mindestens Groß- und Kleinbuchstaben
-1. Sind nicht leicht zu erraten, stehen in keinem Zusammenhang mit dem Bereich den sie absichern
+Im ISMS wird ein zentrales Werteregister geführt, in dem alle Assets aufgelistet und verwaltet werden können.
 
-## Richtlinie
-1. Die Passwörter werden gemäß der beschrieben Richtlinien gebildet
-1. Es erfolgt keine Weitergabe an andere Personen
-1. Der unbefugte Zugriff auf Passwörter wird geschützt
-1. Passwörter werden rotiert und so regelmäßig ausgetauscht
-1. Die Übertragung von Passwörtern (bspw. beim Login) erfolgt immer verschlüsselt
-1. Bei der Eingabe von Passwörtern werden diese nicht im Klartext angezeigt.
-1. Vom Administrator vergebene Passwörter werden beim ersten Login durch den Benutzer geändert
-1. Ebenso müssen von Herstellern gelieferte Passwörter oder Standardpasswörter müssen sofort nach Installation/Inbetriebnahme geändert werden.
+### Erfassung von Werten
+
+Die Werte werden im zentralen Werteregister mit mindestens folgenden Daten erfasst:
+
+- eindeutiger Name des Wertes
+- Eigentümer des Wertes
+- die Bedeutung des Wertes für das Unternehmen
+- Klassifizierung des Wertes
+
+Werden Sachwerte erfasst sollten nach Möglichkeit folgende Informationen zusätzlich erfasst werden:
+
+- Seriennummer
+- Was der Wert bewirkt
+
+### Verantwortlichkeiten
+
+Für Werte übernehmen einzelne Mitarbeiter oder Gruppen/Abteilungen Verantwortung.
+Dabei stellen die Verantwortlichen sicher, dass die ihnen zugewiesenen Werte erfasst und inventarisiert wurden und ordnungsgemäß klassifiziert und geschützt sind.
+Werden die Werte gelöscht oder vernichtet, stellen die Verantwortlichen sicher, dass dies im Einklang mit der Richtlinie zur Klassifizierung und Handhabung von Informationen geschieht.
+
+### Nutzung von Werten
+
+Die Nutzung von Werten erfolgt unter Einhaltung der Richtlinie _Zulässige Nutzung von Werten_.
+
+### Rückgabe von Werten
+
+Endet das Arbeitsverhältnis mit einem (externen) Mitarbeiter/Benutzer müssen alle im Besitz des Nutzers befindlichen Werte dem Unternehmen zurückgegeben werden.
+Wurde durch den Mitarbeiter/Nutzer ein Gerät der Firma erworben oder der Nutzer hatte seine eigenen Geräte im Einsatz, stellen entsprechende Prozesse sicher, dass auf diesen Geräten alle dem Unternehmen gehörenden Informationen sicher entfernt werden.
 
 ## Maßnahmen
+
 Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergestellt:
 
-| Maßnahme                                         | ISMS-Integration | Verantwortlich  | Turnus        | Beschreibung                                                                                                                                                        |
-| ------------------------------------------------ | ---------------- | --------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Manager ist Bestandteil Standard-Software        |                  | IT              | Dauerhaft     | Passwort-Manager wird mit Standard-Software-Paket auf allen Rechner ausgerollt |
-| Bildungsgesetzt ist im Manager hinterlegt        |                  | IT              | Dauerhaft     | Bildungsgesetz der Passwörter ist im Passwort-Manager hinterlegt.                       |
-| Aktualisierung Passwörter                        |        ✔         | Mitarbeiter, IT | Halbjährlich  | Passwörter werden regelmäßig rotiert. |
-| Schulung/Sensibilisierung                        |        ✔         | IT              | Jährlich      | Schulung über Phishing, Gefahr von unsicheren/identischen Passwörtern. |
+| Maßnahme                 | ISMS-Integration | Verantwortlich | Turnus    | Beschreibung                                                          |
+| ------------------------ | ---------------- | -------------- | --------- | --------------------------------------------------------------------- |
+| Werteregister            | ✔                | IT             | Dauerhaft | Führung eines Werteregisters                                          |
+| Liste Verantwortlicher   | ✔                | GF             | Dauerhaft | Dokumentieren der Verantwortlichen für entsprechende Werte            |
+| Liste ausgegebener Werte | ✔                | IT             | Dauerhaft | Dokumentation ausgegebener Hardware an (externe) Mitarbeiter/Benutzer |
+| Löschungsprozess         | ✔                | IT             | Dauerhaft | Dokumentation gelöschter Geräte                                       |
 
 <mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.
