@@ -1,0 +1,23 @@
+{
+  "name": "richtlinien",
+  "version": "1.0.0",
+  "description": "**Diese Seite wird über GitHub Pages unter [konzept7.github.io/richtlinien](https://konzept7.github.io/richtlinien) bereitgestellt.**",
+  "main": "index.js",
+  "scripts": {
+    "generate-sh": "cd ./doc-gen; sh ./convert.sh",
+    "generate-ps": "cd ./doc-gen; ./convert.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konzept7/richtlinien.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/konzept7/richtlinien/issues"
+  },
+  "homepage": "https://github.com/konzept7/richtlinien#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}

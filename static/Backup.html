@@ -1168,8 +1168,8 @@ role="doc-noteref"><sup>2</sup></a></th>
 </tr>
 <tr class="odd">
 <td>Endgeräte</td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">✔</td>
+<td style="text-align: center;">✔</td>
 <td></td>
 </tr>
 <tr class="even">
@@ -1211,8 +1211,8 @@ Unternehmens-Endgeräten gespeichert werden.
 <ul>
 <li>Nach Möglichkeit wird direkt auf Netzlaufwerken/kollaborativen
 Plattformen/Cloud-Storage gearbeitet.</li>
-<li>Sofern nicht möglich oder sinnvoll erfolgt eine tägliche
-Synchronisation selbständig durch den jeweiligen Mitarbeiter.</li>
+<li>Sofern möglich oder sinnvoll erfolgt eine tägliche Synchronisation
+selbständig durch den jeweiligen Mitarbeiter.</li>
 </ul></li>
 <li>Verfahren mit integrierter Versionierung sind zu bevorzugen.</li>
 <li>Backups müssen georedundant zum Original gelagert werden
@@ -1221,9 +1221,11 @@ Synchronisation selbständig durch den jeweiligen Mitarbeiter.</li>
 (Überschwemmung, Erdbeben etc.) ausgesetzt sein</li>
 </ul></li>
 <li>Für besonders wichtige und kritische Systeme werden mindestens zwei
-Backups angelegt. #### Wiederherstellungsverfahren von
-Sicherungskopien</li>
+Backups angelegt.</li>
 </ul>
+<h4
+id="wiederherstellungsverfahren-von-sicherungskopien">Wiederherstellungsverfahren
+von Sicherungskopien</h4>
 <p>Bei der Einrichtung von Servern, Datenbanken, Fileshares,
 Quellcode-Repositories und Entwicklungsumgebungen ist folgendes zu
 beachten:</p>
@@ -1235,26 +1237,26 @@ Ersteinrichtung dokumentiert und eingerichtet.
 <ul>
 <li>Tägliche oder Point-in-time Backups werden für 7 Tage
 aufbewahrt</li>
-<li>Wöchentliche Backups werden für 28 Tage aufbewahrt.</li>
+<li>Wöchentliche Backups werden für 35 Tage aufbewahrt.</li>
 <li>Monatliche Backups werden für 12 Monate aufbewahrt.</li>
 </ul></li>
 <li>Abweichungen davon sind zulässig, müssen aber begründet und
-dokumentiert sein.</li>
+dokumentiert sein.
+<!-- Abweichungen nach unten dokumentieren über Ticketsystem, Abweichungen nach oben automatisch okay --></li>
 </ul></li>
 <li>Bereits vorhandene Verfahren müssen bei Einrichtung einer neuen,
 vergleichbaren Ressource nicht erneut beschrieben werden, deren
 Anwendung muss allerdings dokumentiert sein.</li>
-<li>Die Verfahren zur Wiederherstellung müssen getestet werden.</li>
 <li>Aktuell sind Sicherungen auf physischen Medien nicht vorgesehen.
 Sollte das notwendig werden, erfolgt eine Anpassung der Richtlinie.</li>
 <li>Sicherungen von Systemen werden mindestens einmal pro Jahr getestet,
 um sicherzustellen, dass sie verlässlich sind den Anforderungen
 entsprechend.</li>
 <li>Backups dürfen nur dem relevanten Personenkreis zur Verfügung
-gestellt werden. Es gelten mindestens die gleichen
-Sicherheitsanforderungen wie für die Originaldaten.</li>
+gestellt werden.
+<!-- Backups nur für Admin, Bereitstellung nach Ticket --></li>
 <li>Backups werden verschlüsselt mit der vom Hersteller des
-Backupsystems eingebauten Verschlüsselung. Backup werden nur in
+Backupsystems eingebauten Verschlüsselung. Backups werden nur in
 Cloud-Lösungen gespeichert, die mindestens die Anforderungen der
 ISO27001 erfüllen.</li>
 <li>Nach Möglichkeit sollte mittels Sensorik beim Scheitern von Backups
@@ -1270,11 +1272,11 @@ werden.</li>
 sichergestellt:</p>
 <table>
 <colgroup>
-<col style="width: 29%" />
+<col style="width: 28%" />
 <col style="width: 9%" />
 <col style="width: 12%" />
 <col style="width: 8%" />
-<col style="width: 39%" />
+<col style="width: 40%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1312,14 +1314,14 @@ sichergestellt:</p>
 <td style="text-align: center;">✔</td>
 <td>IT</td>
 <td>Halbjährlich</td>
-<td>Sicherstellen, dass für alle relevanten Daten Backups erstellt
-werden</td>
+<td>Alarmierungseinstellungen testen bzw. überprüfen wenn Test nicht
+möglich</td>
 </tr>
 <tr class="odd">
 <td>Backuperstellung prüfen (Alarmierung nicht möglich)</td>
 <td style="text-align: center;">✔</td>
 <td>IT</td>
-<td>Monatlich</td>
+<td>Halbjährlich</td>
 <td>Sicherstellen, dass für alle relevanten Daten Backups erstellt
 werden</td>
 </tr>
@@ -1332,6 +1334,7 @@ werden</td>
 </tr>
 </tbody>
 </table>
+<!-- TODO: prüfen für Azure Backup Vault-->
 <p><mark>Verstöße sind über die Funktion “Sicherheitsvorfall” des ISMS
 zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.</p>
 <section id="footnotes" class="footnotes footnotes-end-of-document"

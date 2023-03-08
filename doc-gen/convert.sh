@@ -1,4 +1,4 @@
-# bin/bash
+#!/bin/sh
 echo " *******************************************************************"
 echo " ***   Konvertiere alle Markdown Dateien in HTML                 ***"
 echo " ***   Pandoc benötigt, um dieses Skript auszuführen             ***"
@@ -26,8 +26,9 @@ done
 cat index.footer.partial >> ../index.html
 
 # convert existing guidelines to html
-for f in ../richtlinien/*.md
-do
-  echo "Konvertiere $f"
-  pandoc -f markdown -t html $f -o ${f%.md}.html -H "style.html.partial"
+files=(../richtlinien/*.md)
+for file in "${files[@]}"; do
+    echo "Konvertiere $(basename "$file")"
+    docker run --rm -v "$PWD/../richtlinien:/data" -v "$PWD/../doc-gen/style.html.partial:/data/style.html.partial" -v "$PWD/../static:/tmp" pandoc/core -f markdown -t html "/data/$(basename "$file")" -o "/tmp/$(basename "$file" .md).html" -H "/data/style.html.partial"
 done
+rm ./style.html.partial
