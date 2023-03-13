@@ -1,9 +1,10 @@
 # Richtlinie: Drittanbieter
 
 ### Änderungshistorie
+
 | Version | Status  | Datum        | Autor | Bemerkung      |
 | ------- | ------- | ------------ | ----- | -------------- |
-| 1.1.0   | Entwurf | 12. 01. 2023 | FB    | Überarbeitung |
+| 1.1.0   | Entwurf | 12. 01. 2023 | FB    | Überarbeitung  |
 | 1.0.0   | Entwurf | 10. 01. 2023 | FB    | Ersterstellung |
 
 ## Zweck
@@ -29,7 +30,6 @@ Ziel dieser Richtlinie ist es, die Anforderungen an die Datensicherheit von Drit
 [^4]: Personen: Die Richtlinie ist vom Adressatenkreis schriftlich oder elektronisch zu bestätigen. Bei Änderungen muss eine Information an den Adressatenkreis erfolgen. Hardware: Überprüfung der Einhaltung erfolgt automatisiert oder über wiederkehrende Maßnahme. Bei Änderungen erfolgt eine Anpassung der Automation/Maßnahme.
 [^5]: Personen, die berechtigt sind Produkte von Drittanbietern zu erwerben.
 
-
 ## Geltungsbereich
 
 Alle Drittanbieter, die vertrauliche oder personenbezogene Daten verarbeiten, speichern oder übermitteln.
@@ -43,14 +43,14 @@ Drittanbieter erfüllen die Anforderungen des Unternehmens, der Gesetzgebung und
 ### Register der Drittanbieter
 
 Alle Drittanbieter werden im [Register der Drittanbieter](https://k7.athereon.tech/assets/) registriert und erfasst. Dabei werden folgende Daten erfasst:
- 
- - Standort des Unternehmens und Ort der Datenspeicherung
- - Art der Leistung
- - Natur der verarbeiteten Daten
- - Verträge, AGBs, SLAs
+
+- Standort des Unternehmens und Ort der Datenspeicherung
+- Art der Leistung
+- Natur der verarbeiteten Daten
+- Verträge, AGBs, SLAs
 
 Das Register der Drittanbieter wird in Athereon GRC im Bereich Assets vom Typ Provider erfasst. Sie sind der Gruppe "Drittanbieter" zuzuordnen.
-  
+
 <mark>Für jeden Drittanbieter muss eine Einstufung hinsichtlich des Schutzbedarfes erfolgen.</mark>
 
 ### Auswahl der Drittanbieter
@@ -66,20 +66,20 @@ Vor Beauftragung eines Drittanbieters sollten folgende Punkte beachtet werden:
 
 Vor der Beauftragung eines Drittanbieters wird eine sorgfältige Prüfung der Datensicherheit durchgeführt, die Folgendes umfasst:
 
- - Datensicherheit, inklusive identifizierter und klassifizierter Risiken
- - Fähigkeit, die Anforderungen des Unternehmens zu erfüllen
- - Referenzen
- - Liefervereinbarungen und -verträge, die Anforderungen an die Datensicherheit enthalten
- - Einhaltung von Gesetzen und Vorschriften
- - Zertifierungen
+- Datensicherheit, inklusive identifizierter und klassifizierter Risiken
+- Fähigkeit, die Anforderungen des Unternehmens zu erfüllen
+- Referenzen
+- Liefervereinbarungen und -verträge, die Anforderungen an die Datensicherheit enthalten
+- Einhaltung von Gesetzen und Vorschriften
+- Zertifierungen
 
 Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergestellt:
 
-| Maßnahme  | ISMS-Integration | Verantwortlich       | Turnus     | Beschreibung                                                                        |
-| --------- | :--------------: | -------------------- | ---------- | ----------------------------------------------------------------------------------- |
-| Erfassung |        ✔         | Geschäftsführung, IT | Dauerhaft  | Alle Drittanbieter werden spätestens ab Inkrafttreten des Vertrages erfasst         |
-| Report    |        ✔         | Geschäftsführung, IT | Jährlich   | Prüfung, ob alle Drittanbieter erfasst sind sowie ggf. Neueinstufung bei Änderungen |
-| Audit     |        ✔         | Geschäftsführung, IT | bei Bedarf | Audit bei Drittanbietern                                                            |
+| Maßnahme  | ISMS-Integration | Verantwortlich       | Turnus     | Beschreibung                                                                             |
+| --------- | :--------------: | -------------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| Erfassung |        ✔         | Geschäftsführung, IT | Dauerhaft  | Alle Drittanbieter werden spätestens ab Inkrafttreten des Vertrages erfasst              |
+| Report    |        ✔         | Geschäftsführung, IT | Jährlich   | Prüfung, ob alle Drittanbieter erfasst sind sowie ggf. Neueinstufung bei Änderungen      |
+| Audit     |        ✔         | Geschäftsführung, IT | bei Bedarf | Audit bei Drittanbietern - im Verdachtsfall bei Datenschutzverstößen, Vertragsbruch etc. |
 
 <mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.
 

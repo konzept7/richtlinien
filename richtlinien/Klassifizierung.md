@@ -1,6 +1,7 @@
 # Richtlinie: Klassifizierung von Informationen
 
 ### Änderungshistorie
+
 | Version | Status  | Datum        | Autor | Bemerkung      |
 | ------- | ------- | ------------ | ----- | -------------- |
 | 1.0.0   | Entwurf | 16. 01. 2023 | FB    | Ersterstellung |
@@ -33,11 +34,13 @@ Informationen sollten in Bezug auf rechtliche Anforderungen, Wert, Kritikalität
 ### Vertrauliche Informationen und die DSGVO
 
 Folgende Informationen werden als vertraulich eingestuft:
+
 - Die Offenlegung hat kurzfristig erhebliche Auswirkungen auf den Betrieb oder die strategischen Ziele.
 - Die Offenlegung hat schwerwiegende Auswirkungen auf langfristige strategische Ziele oder gefährdet das Überleben der Organisation.
 
-
 Vertrauliche Informationen sind für das Unternehmen von erheblichem Wert, und eine unbefugte Offenlegung oder Verbreitung könnte dem Unternehmen schweren finanziellen Schaden zufügen oder seinen Ruf schädigen, den Widerruf von Verträgen zur Folge haben und dazu führen, dass es bei künftigen Ausschreibungen keinen Zuschlag erhält.
+
+<!-- Opferschutz -->
 
 Daten, die in der Datenschutz-Grundverordnung als besondere Kategorien personenbezogener Daten definiert sind, fallen in diese Kategorie.
 
@@ -48,7 +51,7 @@ Die DSGVO definiert besondere Kategorien personenbezogener Daten:
 - rassische/ethnische Herkunft
 - politische Meinung
 - religiöse Überzeugungen
-- Gewerkschaftsmitgliedschaft
+- Gewerkschaftsmitgliedschaft <!-- Prüfen -->
 - körperlicher/geistiger Gesundheitszustand
 - Sexualleben
 - Vorstrafenregister
@@ -78,29 +81,26 @@ Informationen, die in der Datenschutz-Grundverordnung als personenbezogene Daten
 
 Eine öffentliche Bekanntgabe oder Verbreitung dieser Informationen ist nicht beabsichtigt und kann zu Geldstrafen sowie zu einem Reputationsverlust für das Unternehmen führen.
 
-Beispiele für interne Informationen
-
 Der Großteil der Unternehmensinformationen fällt in diese Kategorie. Protokolle, Pläne, Schulungsunterlagen, Managementberichte, interne Mitteilungen, Kundenlisten, Auftragshistorien, Informationen die nicht explizit als "vertraulich" gekennzeichnet sind.
 
-#### Beispiele für interne Informationen
+##### Beispiele für interne Informationen
 
- - Name
- - E-Mail
- - Arbeitsort
- - Telefonnummer am Arbeitsplatz
- - Fotos
- - Weitere Beispiele:
-   - Entwürfe von Berichten, Dokumenten und Protokollen
-   - Systeme
-   - interne Korrespondenz
-   - Informationen, die unter Lizenz gehalten werden
-   - Unternehmensrichtlinien und -verfahren
+- Name
+- E-Mail
+- Arbeitsort
+- Telefonnummer am Arbeitsplatz
+- Fotos
+- Weitere Beispiele:
+  - Entwürfe von Berichten, Dokumenten und Protokollen
+  - Systeme
+  - interne Korrespondenz
+  - Informationen, die unter Lizenz gehalten werden
 
 ## Vorgaben
 
 #### Speicherung von Informationen
 
-Unternehmensinformationen dürfen nicht auf persönlichen Geräten oder Systemen gespeichert werden, einschließlich persönlicher E-Mails und Cloud-basierter Speicher, es sei denn, dies wurden von der Geschäftsleitung genehmigt und die entsprechende Person ist in einem Verzeichnis der zugelassenen Nutzer erfasst.
+Unternehmensinformationen dürfen nicht auf persönlichen Geräten oder Systemen gespeichert werden, einschließlich persönlicher E-Mails und Cloud-basierter Speicher, es sei denn, dies wurde von der Geschäftsleitung genehmigt und die entsprechende Person ist in einem Verzeichnis der zugelassenen Nutzer erfasst.
 
 #### Zugangskontrolle
 
@@ -108,13 +108,13 @@ Unternehmensinformationen dürfen nicht frei zugänglich sind durch eine Zugangs
 
 #### Speicherung vertraulicher Informationen
 
- - Vertrauliche Informationen müssen innerhlab und außerhalb der Primärsysteme des Unternehmens sicher verschlüsselt werden.
- - Die dazugehörigen Schlüssel dürfen nicht auf gleichem Weg versendet werden wie die eigentliche Information.
-   - Es ist beispielsweise nicht zulässig eine verschlüsselte Datei per Email zu versenden und das Passwort ebenfalls per Email mitzuschicken.
-   - Vorgesehenes Verfahren: Upload über [sicheren Fileserver](https://pw.k-7.eu) und mit Passwort sichern. Passwort anschließend telefonisch oder persönlich mitteilen.
- - Physisch gespeicherte vertrauliche Informationen sind als solche zu kennzeichnen (mithilfe eines Stempels "Vertraulich")
- - Die physische Übermittlung von Geräten mit vertraulichen Informationen erfolgt entweder persönlich oder über einen registrierten, sicheren Kurierdienst.
- - Vertrauliche Informationen dürfen nicht über öffentliche Netze übertragen werden.
+- Vertrauliche Informationen müssen innerhalb und außerhalb der Primärsysteme des Unternehmens sicher verschlüsselt werden.
+- Die dazugehörigen Schlüssel dürfen nicht auf gleichem Weg versendet werden wie die eigentliche Information.
+  - Es ist beispielsweise nicht zulässig eine verschlüsselte Datei per Email zu versenden und das Passwort ebenfalls per Email mitzuschicken.
+  - Vorgesehenes Verfahren: Upload über [sicheren Fileserver](https://pw.k-7.eu) und mit Passwort sichern. Passwort anschließend telefonisch oder persönlich mitteilen.
+- Physisch gespeicherte vertrauliche Informationen sind als solche zu kennzeichnen (mithilfe eines Stempels "Vertraulich")
+- Die physische Übermittlung von Geräten mit vertraulichen Informationen erfolgt entweder persönlich oder über einen registrierten, sicheren Kurierdienst.
+- Vertrauliche Informationen dürfen nicht über öffentliche Netze übertragen werden.
 
 #### Kontrolle von Geräten und Medien
 
@@ -124,7 +124,7 @@ Unternehmensinformationen dürfen nicht frei zugänglich sind durch eine Zugangs
 
 #### Backups
 
-Backups unterliegen den gleichen Vorgaben hinsichtlich Verschlüsselung und Zugangskontrolle wie Originaldaten.
+Backups unterliegen den gleichen Vorgaben hinsichtlich Klassifizierung und Datenschutz wie Originaldaten.
 
 #### Vernichtung
 
@@ -166,13 +166,17 @@ Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergeste
 | ------------------------------------------------ | :--------------: | -------------- | --------- | --------------------------------------------------------------------------------------------- |
 | Sicherer Container für phys. Medien              |        ✔         | GF             | Initial   | Safe oder sichere Schublade für vertrauliche phys. Medien anschaffen                          |
 | Reißwolf                                         |        ✔         | GF             | Initial   | Reißwolf zur Vernichtung von vertraulichen Informationen in Papierform anschaffen             |
-| Jährliche Überprüfung Werteregister              |        ✔         | IT, GF         | Jährlich  | Überprüfen des Verzeichnisses physischer Medien                                               |
+| Überprüfung Vertrauliche Informationen           |        ✔         | GF             | Jährlich  | Überprüfen des Registers für Informationsbestände                                             |
+| Überprüfung Werteregister                        |        ✔         | IT, GF         | Jährlich  | Überprüfen des Verzeichnisses physischer Medien                                               |
 | Sicherer Fileserver                              |        ✔         | IT             | Initial   | Anlegen eines sicheren Datenaustausch-Servers, inkl. Verschlüsselung und Zugangskontrolle     |
 | Secure Erase Software                            |        ✔         | IT, GF         | Initial   | Anschaffen einer Secure Erase Software                                                        |
 | Readme-Generator anlegen/überprüfen              |        ✔         | IT, GF, PL     | Jährlich  | Hilfstool zum Klassifizieren der verwenden Daten im Projekt erstellen und jährlich überprüfen |
 | Readme-Generator bei Projektstart und Änderungen |        ✔         | IT, GF, PL     | Dauerhaft | Klassifizierung der Informationen mindestens zu Projektstart                                  |
 | Datenträgerverwaltung über ACL                   |        ✔         | IT, GF, PL     | Dauerhaft | Netzlaufwerke müssen aktiv über Access-Control-Lists verwaltet werden                         |
 | Verschlüsselung von Datenträgern                 |        ✔         | IT, GF, PL     | Dauerhaft | Alle Datenträger und Netzlaufwerke müssen wenigstens at-rest verschlüsselt werden             |
+
+<!-- Verzeichnis Nutzer-Freigabe -->
+<!-- Prozess Löschen/Wipen mit Protokoll -->
 
 <mark>Verstöße sind über die Funktion "Sicherheitsvorfall" des ISMS zu melden.</mark> Gegenmaßnahmen werden einzelfallbasiert getroffen.
 
