@@ -32,72 +32,79 @@ Durch die Protokollierung werden diese Ereignisse aufgezeichnet und Beweise gesa
 Alle unter Geltungsbereich genannten Geräte verfügen über eine Protokollierungsfunktion, sofern dies möglich und praktikabel ist. Nutzer der Geräte werden über diese Protokollierung in Kenntnis gesetzt.
 
 ## Richtlinie
+
 Die erstellten Protokolle werden aufbewahrt und regelmäßg geprüft.
 
 ### Umfang
+
 Die Ereignisprotokolle sollten gegebenenfalls folgende Informationen beinhalten:
-* Zeitstempel
-* Gerät (Bezeichnung oder Seriennummer, ggf Standort)
-* Benutzer-Informationen (Benutzername oder ID)
-* Systemaktivität
-* Zugriffsversuche (erfolgreich oder abgelehnt)
-* Änderungen am System
-* Dateien auf die zugegriffen wurde
-* Protokollierung Aktivierung und Deaktivierung von Schutzeinrichtungen (wie Virenscanner, Firewall, etc.)
-* Soweit möglich erfolgt die Überwachung weitgehend automatisch, sodass konsolidierte Berichte erstellt werden können
 
-
-
+- Zeitstempel
+- Gerät (Bezeichnung oder Seriennummer, ggf Standort)
+- Benutzer-Informationen (Benutzername oder ID)
+- Systemaktivität
+- Zugriffsversuche (erfolgreich oder abgelehnt)
+- Änderungen am System
+- Dateien auf die zugegriffen wurde
+- Protokollierung Aktivierung und Deaktivierung von Schutzeinrichtungen (wie Virenscanner, Firewall, etc.)
+- Soweit möglich erfolgt die Überwachung weitgehend automatisch, sodass konsolidierte Berichte erstellt werden können
 
 ### Protokolle: Zugriffskontrolle
+
 Die Protokolle werden nur von autorisiertem Personal gesichtet, geprüft und verarbeitet.
 Alle Protokolle sind streng geschützt und werden gemäß Zugriffs- und Datenaufbewahrungsrichtlinien verwaltet.
 Systemadministratoren sollten soweit möglich nicht in der Lage sein, die Protokolle über ihre eigenen Aktivitäten zu manipulieren oder zu löschen.
 
 ### Schutz von Ereignisprotokollinformationen
+
 Generell sind die Protokollierungseinrichtungen und deren gesammelten Informationen vor Manipulation und unberechtigtem Zugriff zu schützen.
 Gleichzeitig dient der Schutz dazu, die Protokolleinrichtungen vor folgenden möglichen Problemen zu schützen:
-* Abänderung von bereits protokollierten Informationen
-* Bearbeitung oder gar Löschung von Protokolldateien
-* Überwachung der Speicherkapazität der Protokolldatenträger, um Aufzeichnungsausfälle zu vermeiden
 
+- Abänderung von bereits protokollierten Informationen
+- Bearbeitung oder gar Löschung von Protokolldateien
+- Überwachung der Speicherkapazität der Protokolldatenträger, um Aufzeichnungsausfälle zu vermeiden
 
 ### Protokolle von Administratoren und Bedienern
+
 Aktivitäten der Systemadministratoren sollten protokolliert werden und diese Protokolle sollten geschützt und regelmäßig überprüft werden.\
 Benutzer mit privilegierten Kontent, könnten Protokolle Ihrer System manipulieren, daher sind diese Protokolle zu schützen und zu überprüfen.\
 
-
 ### Uhrzeitsynchronisierung
+
 Alle System innerhalb der Organisation synchronisieren in regelmäßigen Abständen die Uhrzeit mit einer entsprechenden Referenz, damit Ereignisse zeitlich zuzuordnen sind.
 
-
 ### Überwachung der Protokolle
+
 Für die Überwachung und Analyse von Ereignissen werden Zuständigkeiten vergeben.\
 Ereignisse mit hohem Risiko lösen automatisch eine Warnung an den Incident-Management-Prozess aus.\
-Die Protokolldateien werden täglich auf Folgendes geprüft:
-* Sicherheitsereignisse
-* Protokolle der Systembereich, die SAD (Sensitive Authentication Data) speichern, verarbeiten oder übertragen
-* Protokolle kritischer Systemkomponenten
-* Protokolle aller Server und Systemkomponenten, die
-Sicherheitsfunktionen erfüllen (z. B. Firewalls, Systeme zur
-Erkennung und Verhinderung von Eindringlingen (IDS/IPS),
-Authentifizierungsserver, etc.)
+Die Protokolldateien werden ereignisbasiert auf Folgendes geprüft:
+
+- Sicherheitsereignisse
+- Protokolle der Systembereich, die SAD (Sensitive Authentication Data) speichern, verarbeiten oder übertragen
+- Protokolle kritischer Systemkomponenten
+- Protokolle aller Server und Systemkomponenten, die
+  Sicherheitsfunktionen erfüllen (z. B. Firewalls, Systeme zur
+  Erkennung und Verhinderung von Eindringlingen (IDS/IPS),
+  Authentifizierungsserver, etc.)
 
 ### Aufbewahrung der Ereignisprotokolle
+
 Ereignisprotokolle werden zwölf Monate aufbewahrt, die Protkolle der vergangenen drei Monate sind permanent verfügbar zu halten.
 
 ### Zentralisierte Protokollierung
+
 Die Aufbewahrung der Protokolle erfolgt auf einem entfernten, gesicherten Speicherort (Cloud-Storage).
 
 ### Persönlicher Datenschutz
+
 Die Protokollierung unterliegt mindestens den Anforderungen der DSGVO.
 
-
 ## Maßnahmen
+
 Die Durchsetzung der genannten Punkte wird über folgende Maßnahmen sichergestellt:
 
-| Maßnahme                           | ISMS-Integration | Verantwortlich           | Turnus        | Beschreibung                                                                                                                                                        |
-| ---------------------------------- | ---------------- | ------------------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Protokollierung                    |                  | IT                        | Dauerhaft      | Protokollierung erfolgt durch auf den Geräten befindlichen Systemen oder durch die eingesetzte Software selber. |
-| Sichtung der Protokolle            |                  | IT                       | vierteljährlich | Protkolle werden vierteljährlich gesichtet und auf besondere Vorkommnisse geprüft.  |
-
+| Maßnahme                   | ISMS-Integration | Verantwortlich | Turnus          | Beschreibung                                                                                                                |
+| -------------------------- | ---------------- | -------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Information an Mitarbeiter |                  | IT             | Initial         | Mitarbeiter werden darüber in Kenntnis gesetzt, dass diverse Bereiche der IT-Infrastruktur über Protokollierungen verfügen. |
+| Protokollierung            |                  | IT             | Dauerhaft       | Protokollierung erfolgt durch auf den Geräten befindlichen Systemen oder durch die eingesetzte Software selber.             |
+| Sichtung der Protokolle    |                  | IT             | vierteljährlich | Protkolle werden vierteljährlich gesichtet und auf besondere Vorkommnisse geprüft.                                          |
